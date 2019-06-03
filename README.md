@@ -2,6 +2,8 @@
 
 *Source: https://sass-guidelin.es/*
 
+*Gitpage: https://dinhtienn.github.io/sass-guideline/*
+
 ## An opinionated styleguide for writing sane, maintainable and scalable Sass.
 
 ### The Sass Guidelines project has been translated into several languages by [generous contributors](https://github.com/HugoGiraudel/sass-guidelines/issues/96).
