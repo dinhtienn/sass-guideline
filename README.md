@@ -1,132 +1,132 @@
 # Sass Guideline
 
-*Source: https://sass-guidelin.es/*
+*Nguồn: https://sass-guidelin.es/*
 
 *Gitpage: https://dinhtienn.github.io/sass-guideline/*
 
-## An opinionated styleguide for writing sane, maintainable and scalable Sass.
+## Hướng dẫn sử dụng Sass chuẩn mực, có khả năng bảo trì và mở rộng (mang quan điểm cá nhân).
 
-### The Sass Guidelines project has been translated into several languages by [generous contributors](https://github.com/HugoGiraudel/sass-guidelines/issues/96).
+### Dự án Sass Guidelines được dịch sang nhiều ngôn ngữ bởi [những người đóng góp](https://github.com/HugoGiraudel/sass-guidelines/issues/96).
 
-## About The Author
+## Về tác giả
 
-My name is [Hugo Giraudel](http://hugogiraudel.com/), I am a French front-end developer, based in Berlin (Germany) since 2015, currently working at [N26](https://n26.com/).
+Tên tôi là [Hugo Giraudel](http://hugogiraudel.com/), Tôi là một front-end developer người Pháp, có trụ sở tại Berlin (Đức) từ năm 2015, hiện đang làm việc tại [N26](https://n26.com/).
 
-I have been writing Sass for several years now and I am the author of many Sass-related projects such as [SassDoc](http://sassdoc.com/), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) and [Sass-Compatibility](http://sass-compatibility.github.io/). If you are interested in more of my contributions to the Sass community, have a look at [that list](http://github.com/HugoGiraudel/awesome-sass).
+Tôi đã viết Sass được vài năm nay và tôi là tác giả của nhiều dự án liên quan đến Sass như [SassDoc](http://sassdoc.com/), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) và [Sass-Compatibility](http://sass-compatibility.github.io/). Nếu bạn quan tâm nhiều hơn đến những đóng góp của tôi cho cộng đồng Sass, hãy xem qua [danh sách này](http://github.com/HugoGiraudel/awesome-sass).
 
-I also happen to be the author of a book about CSS (in French) entitled [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (*Eyrolles* editions), as well as a book about Sass (in English) entitled [Jump Start Sass](https://learnable.com/books/jump-start-sass) (*Learnable* editions).
+Tôi cũng là tác giả của một cuốn sách về CSS (bằng tiếng Pháp) có tựa đề [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (phiên bản *Eyrolles*), cũng như một cuốn sách về Sass (bằng Tiếng Anh) có tên [Jump Start Sass](https://learnable.com/books/jump-start-sass) (phiên bản *Learnable*).
 
-## Contributing
+## Đóng góp
 
-Sass Guidelines is a free project that I maintain in my spare time. Needless to say, it is quite a large amount of work to keep everything up-to-date, documented and relevant. Thankfully, I get helped by a lot of great contributors, especially when it comes to maintaining dozens of different translations. Be sure to thank them!
+Sass Guidelines là một dự án miễn phí mà tôi duy trì trong thời gian rảnh rỗi. Không cần phải nói, đó là một khối công việc khá lớn để giữ cho mọi thứ được cập nhật, được dẫn chứng và thích hợp. Rất may, tôi nhận được sự đóng góp của rất nhiều người tuyệt vời đặc biệt là việc duy trì hàng tá các bản dịch khác nhau. Hãy chắc chắn cảm ơn họ nhé!
 
-Now if you feel like contributing, please know that tweeting about it, spreading the word, or fixing a tiny typo by opening an issue or a pull-request on the [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) would be great!
+Nếu bạn muốn đóng góp vào dự án, vui lòng tweet về nó, truyền bá hoặc sửa từng lỗi đánh máy nhỏ bằng cách mở ra một issue hoặc pull-request trên [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) sẽ là rất tuyệt vời!
 
-Last but not least before we start: if you enjoyed this document, or if it is useful for you or your team, please consider supporting it so I can keep working on it!
+Cuối cùng nhưng không kém phần quan trọng trước khi ta bắt đầu: Nếu bạn thích tài liệu này hoặc nó hữu ích cho bạn hoặc team của bạn, vui lòng xem xét việc hỗ trợ để tôi có thể tiếp tục làm việc với nó!
 
-## About Sass
+## Về Sass
 
-This is how [Sass](http://sass-lang.com/) describes itself in its [documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
+Đây là cách [Sass](http://sass-lang.com/) được mô tả trong [documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html) của nó:
 
-> Sass is an extension of CSS that adds power and elegance to the basic language.
+> Sass là một phần mở rộng của CSS tăng thêm sức mạnh và sự thanh lịch tới ngôn ngữ cơ bản.
 
-Sass’ ultimate objective is to fix CSS’ flaws. CSS, as we all know, is not the best language in the world [citation needed]. While very simple to learn, it can quickly get quite messy, especially on large projects.
+Mục tiêu cuối cùng của `Sass` là sửa những thiếu xót của CSS. CSS, như chúng ta đã biết, không phải là ngôn ngữ tốt nhất trên thế giới [cần dẫn nguồn]. Mặc dù rất đơn giản để học, nó có thể nhanh chóng trở nên khá lộn xộn, đặc biệt là trong các dự án lớn.
 
-This is where Sass comes in, as a meta-language, to improve CSS’ syntax in order to provide extra features and handy tools. Meanwhile, Sass wants to be conservative regarding the CSS language.
+Đó là lý do Sass xuất hiện, như một meta-language, để cải thiện cú pháp của CSS nhằm cung cấp các tính năng bổ sung và các công cụ tiện dụng. Trong khi đó, Sass muốn bảo tồn về ngôn ngữ CSS.
 
-The point is not to turn CSS into a fully featured programming language; Sass only wants to help where CSS fails. Because of this, getting started with Sass is no harder than learning CSS: it simply adds a couple of [extra features](http://sitepoint.com/sass-reference/) on top of it.
+Điều này không biến Css trở thành một ngôn ngữ lập trình đầy đủ tính năng; Sass chỉ muốn giúp đỡ những nơi CSS thất bại. Chính về điều này, khởi đầu với Sass không khó hơn việc học Css, nó đơn giản là thêm một vài [tính năng bổ sung](http://sitepoint.com/sass-reference/) trên đầu của nó.
 
-That being said, there are many ways to use these features. Some good, some bad, some unusual. These guidelines are meant to give you a consistent and documented approach to writing Sass code.
+Điều đó nghĩa rằng, có nhiều cách để sử dụng những tính năng này. Một vài chỗ tốt, một vài chỗ tệ, một số bất bình thường. Các hướng dẫn này nhằm cung cấp cho bạn một cách tiếp cận nhất quán và được dẫn chứng rõ ràng để viết code Sass.
 
-### *Ruby Sass Or LibSass*
+### *Ruby Sass hay LibSass*
 
-[Sass’ first commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) goes back as far as late 2006, more than 10 years ago. Needless to say it has come a long way since then. Initially developed in Ruby, varied ports popped up here and there. The most successful one, [LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114) (written in C/C++) is now close to being fully compatible with the original Ruby version.
+[Commit đầu tiên của Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe), trở lại vào cuối năm 2016, hơn 10 năm trước. Không cần phải nói nó đã đi một chặng đường dài kể từ đó. Ban đầu được phát triển trên Ruby, các port khác nhau xuất hiện ở đây đó. Phiên bản thành công nhất, [LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114) (được viết bằng C/C++) hiện đã gần như tương thích hoàn toàn với phiên bản Ruby gốc.
 
-In 2014, [Ruby Sass and LibSass teams decided to wait for both versions to sync up before moving forward](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Since then, LibSass has been actively releasing versions to have feature-parity with its older sibling. The last remaining inconsistencies are gathered and listed by myself under the [Sass-Compatibility](http://sass-compatibility.github.io/) project. If you are aware of an incompatibility between the two versions that is not listed, please be kind enough to open an issue.
+Vào năm 2014, [các team Ruby Sass và LibSass đã quyết định chờ đợi cả hai phiên bản đồng bộ hoá trước khi chuyển tiếp](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Kể từ đó, LibSass đã tích cực phát hành các phiên bản để có tính năng tương đương với các phiên bản cũ hơn của nó. Những mâu thuẫn còn lại của nó được tôi thu thập và liệt kê tại dự án [Sass-Compatibility](http://sass-compatibility.github.io/). Nếu bạn nhận thấy sự không tương thích giữa hai phiên bản mà không được liệt kê, vui lòng mở ra một issue.
 
-Coming back to choosing your compiler. Actually, it all depends on your project. If it is a Ruby on Rails project, you better use Ruby Sass, which is perfectly suited for such a case. Also, be aware that Ruby Sass will always be the reference implementation and will always lead LibSass in features. And if you are looking to [switch from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/), this article is for you.
+Quay trở lại chọn trình biên dịch. Trên thực tế, tất cả đều phụ thuộc vào dự án của bạn. Nếu nó là một dự án Ruby on Rails, tốt nhất bạn nên sử dụng Ruby Sass là hoàn toàn phù hợp. Ngoài ra, hãy lưu ý rằng Ruby Sass sẽ luôn là bản triển khai tham chiếu và sẽ luôn dẫn đầu LibSass về các tính năng. Và nếu bạn đang tìm cách [chuyển từ Ruby Sass sang LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/), bài viết này là dành cho bạn.
 
-On non-Ruby projects that need a workflow integration, LibSass is probably a better idea since it is mostly dedicated to being wrapped. So if you want to use, let’s say Node.js, [node-sass](https://github.com/sass/node-sass) is all chosen.
+Trong các dự án không phải Ruby cần tích hợp quy trình làm việc, LibSass có lẽ là một ý tưởng tốt hơn vì nó chủ yếu dành riêng cho việc được bao bọc. Vì vậy, nếu bạn muốn sử dụng, cùng nói về Node.js [node-sass](https://github.com/sass/node-sass) đều được chọn.
 
-### *Sass Or SCSS*
+### *Sass hay SCSS*
 
-There is quite a lot of confusion regarding the semantics of the name *Sass*, and for good reason: Sass means both the preprocessor and its own syntax. Not very convenient, is it?
+Có khá nhiều nhầm lẫn về ngữ nghĩa của cái tên *Sass*, và câu trả lời xác đáng nhất: Sass mang nghĩa là cả bộ tiền xử lý và cú pháp của chính nó. Có vẻ nó không thích hợp lắm phải không?
 
-You see, Sass initially described a syntax of which the defining characteristic was its indentation-sensitivity. Soon enough, Sass maintainers decided to close the gap between Sass and CSS by providing a CSS-friendly syntax called *SCSS* for *Sassy CSS*. The motto is: if it’s valid CSS, it’s valid SCSS.
+Bạn thấy đấy, Sass ban đầu mô tả một cú pháp trong đó sự hạn chế riêng biệt chính là sự nhạy cảm lõm vào của nó. Ngay sau đó, những người duy trì Sass đã quyết định thu hẹo khoảng cách giữa Sass và CSS bằng cách cung cấp một cú pháp thân thiện với CSS có tên là *SCSS* nghĩa là *Sassy CSS*. Phương châm của nó là: nếu CSS hợp lệ, SCSS cũng hợp lệ.
 
-Since then, Sass (the preprocessor) has been providing [two different syntaxes](http://www.sitepoint.com/whats-difference-sass-scss/): Sass (not all-caps, [please](http://sassnotsass.com/)), also known as *the indented syntax*, and SCSS. Which one to use is pretty much up to you since both are strictly equivalent in features. It’s only a matter of aesthetics at this point.
+Kể từ đó, Sass (bộ tiền xử lý) đã cung cấp [hai cú pháp khác nhau](http://www.sitepoint.com/whats-difference-sass-scss/): Sass (not all-caps, [please](http://sassnotsass.com/)), còn được gọi là *cú pháp thụt lề*, và SCSS. Sử dụng cái nào là tuỳ thuộc vào bạn vì cả hai đều tương đương nhau về tính năng. Nó chỉ là vấn đề thẩm mỹ tại thời điểm này.
 
-Sass’ whitespace-sensitive syntax relies on indentation to get rid of braces, semi-colons and other punctuation symbols, leading to a leaner and shorter syntax. Meanwhile, SCSS is easier to learn since it’s mostly some tiny extra bits on top of CSS.
+Cú pháp nhạy cảm với khoảng trắng của Sass, dựa vào thụt lề để loại bỏ dấu ngoặc, dấu chấm phẩy và các ký hiệu dấu chấm câu khác, dẫn đến cú pháp gọn và ngắn hơn. Trong khi đó, SCSS dễ học hơn vì nó chủ yếu là một số bit thừa nhỏ trên CSS.
 
-I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, SCSS is the default syntax throughout these guidelines. You can switch to Sass indented syntax in the side panel.
+Cá nhân tôi, thích SCSS hơn Sass vì nó gần với CSS hơn và thân thiện hơn với hầu hết các nhà phát triển. Do đó, SCSS là cú pháp mặc địch trong suốt hướng dẫn này. Bạn có thể chuyển sang cú pháp thụt lề Sass trong bảng điều khiển bên.
 
-### *Other Preprocessors*
+### *Các bộ tiền xử lý khác*
 
-Sass is a preprocessor among others. Its most serious competitor has to be [Less](http://lesscss.org/), a Node.js based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap](http://getbootstrap.com/) using it (until version 4). There is also [Stylus](http://learnboost.github.io/stylus/), a very permissive and flexible preprocessor however slightly harder to use and with a smaller community.
+Sass là một tiền xử lý trong số khác. Đối thủ nặng ký nhất của nó là [Less](http://lesscss.org/), một bộ tiền xử lý dựa trên Node.js đã trở nên khá phổ biến nhờ khung CSS nổi tiếng [Bootstrap](http://getbootstrap.com/) sử dụng nó (cho đến phiên bản 4). Ngoài ra còn có [Stylus](http://learnboost.github.io/stylus/), một bộ tiền xử lý rất dễ được chấp nhận và linh hoạt tuy nhiên hơi khó sử dụng và với một cộng đồng nhỏ hơn.
 
-*Why choose Sass over any other preprocessor?* is still a valid question today. Not so long ago, we used to recommend Sass for Ruby-based projects because it was first made in Ruby and played well with Ruby on Rails. Now that LibSass has caught up (mostly) with original Sass, this is no longer relevant advice.
+*Tại sao lại chọn Sass hơn bất kỳ bộ tiền xử lý nào khác?* vẫn là một câu hỏi xác đáng ngày nay. Cách đây không lâu, chúng tôi đã từng đề xuất Sass cho các dự án dựa trên Ruby vì nó lần đầu tiên được tạo ra trong Ruby và kết hợp tốt với Ruby on Rails. Hiện tại LibSass đã bắt kịp (chủ yếu) với Sass ban đầu, đây không còn là lời khuyên thích hợp.
 
-What I do like with Sass is its conservative approach to CSS. Sass’ design is based on strong principles: much of the design approach comes naturally out of the core teams’ beliefs that a) adding extra features has a complexity cost that needs to be justified by usefulness and, b) it should be easy to reason about what a given block of styles is doing by looking at that block alone. Also, Sass has a much sharper attention to detail than other preprocessors. As far as I can tell, the core designers care deeply about supporting every corner-case of CSS compatibility and making sure every general behavior is consistent. In other words, Sass is a software aimed at solving actual issues; helping to provide useful functionality to CSS where CSS falls short.
+Những gì tôi thích ở Sass là cách tiếp cận bảo toàn của nó với CSS. Thiết kế của Sass dựa trên các nguyên tắc mạnh mẽ: phần lớn phương pháp thiết kế xuất phát tự nhiên từ niềm tin của các team cốt lõi rằng thêm các tính năng bổ sung có chi phí phức tạp cần được chứng minh bằng tính hữu dụng và về những gì một block style cho trước đang làm bằng cách chỉ nhìn vào riêng khối đó. Ngoài ra, Sass có sự chú ý sắc nét hơn nhiều so với các bộ tiền xử lý khác. theo tôi, có thể nói rằng các nhà thiết kế cốt lõi quan tâm sâu sắc đến việc hỗ trợ mọi trường hợp tương thích CSS và đảm bảo mọi hành vi chung đều nhất quán. Nói cách khác, Sass là một phần mềm nhằm giải quyết các vấn đề thực tế, giúp cung cấp chức năng hữu ích cho những thiếu xót của CSS.
 
-Preprocessors aside, we should also mention tools like [PostCSS](https://github.com/postcss/postcss) and [cssnext](https://cssnext.github.io/)which have received significant exposure these last few months.
+Bỏ qua các bộ tiền xử lý, chúng ta cũng nên đề cập đến các công cụ như [PostCSS](https://github.com/postcss/postcss) và [cssnext](https://cssnext.github.io/) đã tiếp xúc đáng kể trong vài tháng qua.
 
-PostCSS is commonly (and incorrectly) referred to as a “postprocessor”. The assumption, combined with the unfortunate name, is that PostCSS parses over CSS that has already been processed by a preprocessor. While it can work this way, it is not a requirement so PostCSS is actually just a “processor”.
+PostCSS thường được gọi là (và không chính xác) một “bộ xử lý hậu kỳ”. Giả định, kết hợp với cái tên rủi ro, là PostCSS phân tích cú pháp qua CSS đã được xử lý bởi một bộ xử lý trước. Mặc dù nó có thể hoạt động theo cách này, nhưng nó không phải là một yêu cầu, vì vậy PostCSS thực sự chỉ là một "bộ xử lý".
 
-It lets you access “tokens” of your stylesheets (like selectors, properties and values), process these with JavaScript to perform some operation of any kind and compile the results to CSS. For example, the popular prefixing library [Autoprefixer](https://github.com/postcss/autoprefixer) is built with PostCSS. It parses every rule to see if vendor prefixes are needed by referencing the browser support tool [CanIUse](http://caniuse.com/) and then removes and adds vendor prefixes that are needed.
+Nó cho phép bạn truy cập vào các “token” trong các stylesheets của bạn (như selectors, properties hay values), xử lý chúng với Javascript để thực hiện một số thao tác dưới mọi hình thức và biên dịch kết quả thành CSS. Ví dụ, thư viện tiền tố phổ biến [Autoprefixer](https://github.com/postcss/autoprefixer) được xây dựng bằng PostCSS. Nó phân tích mọi quy tắc để xem có cần tiền tố vendor hay không bằng cách tham khảo công cụ hỗ trợ trình duyệt [CanIUse](http://caniuse.com/), sau đó xoá và thêm tiền tố vendor cần thiết
 
-This is incredibly powerful and great for building libraries that work with any preprocessor (as well as vanilla CSS), but PostCSS isn’t particularly easy to use yet. You have to know a bit of JavaScript to build anything with it, and its API can be confusing at times. While Sass only provides a set of features that are useful to write CSS, PostCSS provides direct access to the CSS AST (*abstract syntax tree*) and JavaScript.
+Điều này cực kỳ mạnh mẽ và tuyệt vời để xây dựng các thư viện hoạt động với bất kỳ bộ tiền xử lý nào (cũng như vanilla CSS), nhưng PostCSS không hề đặc biệt dễ sử dụng. Bạn phải biết một chút Javascript để xây dựng bất cứ thứ gì với nó và API của nó đôi khi có thể gây nhầm lẫn. Mặc dù Sass chỉ cung cấp quyền truy cập trực tiếp vào CSS AST (*cây cú pháp trừu tượng*) và Javascript.
 
-In short, Sass is somewhat easy and will solve most of your problems. On the other hand, PostCSS can be difficult to take in hand (if you aren’t great with JavaScript) but turns out to be incredibly powerful. There’s no reason why you can’t and shouldn’t use both. In fact, PostCSS offers an official SCSS parser for just this thing.
+Tóm lại, Sass có phần dễ dàng và sẽ giải quyết hầu hết vấn đề của bạn. Mặc khác, PostCSS có thể khó để nắm bắt (nếu như bạn không giỏi với Javascript) nhưng hoá ra lại vô cùng mạnh mẽ. Không có lý do gì để bạn có thể sử dụng cả hai cách khác nhau. Trong thực tế, PostCSS cung cấp một trình phân tích cú pháp SCSS chính thức cho điều này.
 
-<blockquote class="note"><p>Thanks to <a href="https://github.com/corysimmons">Cory Simmons</a> for his help and expertise on this section.</p></blockquote>
+<blockquote class="note"><p>Gửi lời cảm ơn đến <a href="https://github.com/corysimmons">Cory Simmons</a> bởi sự giúp đỡ của anh ấy và chuyên môn về phần này.</p></blockquote>
 
-## Introduction
+## Giới thiệu
 
-### *Why A Styleguide*
+### *Tại sao lại là một Styleguide*
 
-A styleguide is not just a pleasing document to read, picturing an ideal state for your code. It is a key document in a project’s life, describing how and why code should be written. It may look like overkill for small projects, but it helps a lot in keeping the codebase clean, scalable and easily maintainable.
+Một styleguide không chỉ là một tài liệu dễ chịu để đọc, hình dung một trạng thái lý tưởng cho code của bạn. Đây là một tài liệu quan trọng trong sự sống của dự án, mô tả cách thức và lý do nên viết code. Nó có thể trông giống như hơi thừa thãi cho các dự án nhỏ, nhưng nó giúp ích rất nhiều trong việc giữ cho codebase được sạch sẽ, có khả năng mở rộng và dễ bảo trì.
 
-Needless to say, the more developers involved on a project, the more code guidelines are needed. Along the same lines, the bigger the project, the more a styleguide is a must.
+Không cần phải nói, càng có nhiều developer tham gia vào một dự án, thì càng cần nhiều hướng dẫn về code. Dọc theo cùng một dòng, dự án càng lớn càng cần phải có một styleguide.
 
-[Harry Roberts](http://csswizardry.com/) states it very well in [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
+[Harry Roberts](http://csswizardry.com/) nói rất rõ trong [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
 
-> A coding styleguide (note, not a visual styleguide) is a valuable tool for teams who:
+> Một styleguide về code (ghi chú không phải là một styleguide trực quan) là một công cụ có giá trị cho các team:
 >
-> - build and maintain products for a reasonable length of time;
-> - have developers of differing abilities and specialties;
-> - have a number of different developers working on a product at any given time;
-> - on-board new staff regularly;
-> - have a number of codebases that developers dip in and out of.
+> - Xây dựng và bảo trì sản phẩm trong một khoảng thời gian hợp lý;
+> - Có các developer với các khả năng về chuyên môn khác nhau;
+> - Có một số developer khác nhau làm việc trên một sản phẩm tại bất kỳ thời điểm nào;
+> - Nhân viên mời tham gia dự án;
+> - Có một số codebases mà các developer nhúng vào và bỏ đi.
 
-### *Disclaimer*
+### *Cho những người không đồng tình*
 
-First things first: **this is not a CSS styleguide**. This document will not discuss naming conventions for CSS classes, modular patterns and the question of IDs in the CSS world. These guidelines only aim at dealing with Sass-specific content.
+Điều đầu tiên: **đây không phải là một CSS styleguide**. Tài liệu này sẽ không thảo luận về các quy ước đặt tên cho các lớp CSS, các mẫu module và câu hỏi về ID trong thế giới CSS. Những hướng dẫn này chỉ nhằm mục đích xử lý nội dung dành riêng cho Sass.
 
-Also, this styleguide is my own and therefore **very opinionated**. Think of it as a collection of methodologies and advice that I have polished and given over the years. It also gives me the opportunity to link to a handful of insightful resources, so be sure to check the *further readings*.
+Ngoài ra, đây là styleguide của riêng tôi và do đó nó **rất opinionated**. Hãy nghĩ về nó như một bộ sưu tập các phương pháp và lời khuyên mà tôi đã đánh bóng và đưa ra trong nhiều năm. Nó cũng cho tôi cơ hội liên kết với một số ít tài nguyên sâu sắc, vì vậy hãy chắc chắn kiểm tra qua *bài đọc thêm*.
 
-Obviously, this is certainly not the only way of doing things, and it may or may not suit your project. Feel free to pick from it and adapt it to your needs. As we say, *your mileage may vary*.
+Rõ ràng, đây chắc chắn không phải là cách duy nhất để làm việc, và nó có thể có hoặc không phù hợp với dự án của bạn. Hãy chọn từ nó những thứ thích ứng với nhu cầu của bạn. Như ta vẫn thường nói *your mileage may vary*.
 
-### *Key Principles*
+### *Những nguyên tắc chủ chốt*
 
-At the end of the day, if there is one thing I would like you to get from this whole styleguide, it is that **Sass should be kept as simple as it can be**.
+Sau cùng, nếu có một điều gì đó tôi muốn bạn nhận được từ toàn bộ styleguide này, đó chính là **Sass nên được giữ đơn giản nhất có thể**.
 
-Thanks to my silly experiments like [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) and [a JSON parser](https://github.com/HugoGiraudel/SassyJSON) in Sass, we are all well aware of what one can do with this preprocessor.
+Nhờ những thử nghiệm ngớ ngẩn của tôi như [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) và [a JSON parser](https://github.com/HugoGiraudel/SassyJSON) trong Sass, tất cả chúng ta đều biết rõ những gì người ta có thể làm với bộ tiền xử lý này.
 
-Meanwhile, CSS is a simple language. Sass, being intended to write CSS, should not get much more complex than regular CSS. The [KISS principle](http://en.wikipedia.org/wiki/KISS_principle)(Keep It Simple Stupid) is key here and may even take precedence over the [DRY principle](http://en.wikipedia.org/wiki/Don't_repeat_yourself) (Don’t Repeat Yourself) in some circumstances.
+Trong khi đó, CSS là một ngôn ngữ đơn giản. Sass, được tạo ra để viết CSS, không nên phức tạp hơn nhiều so với CSS thông thường. [KISS principle](http://en.wikipedia.org/wiki/KISS_principle) (Giữ nó đơn giản đến mức ngu ngốc) là chìa khoá ở đây và thậm chí có thể được ưu tiên hơn [DRY principle](http://en.wikipedia.org/wiki/Don't_repeat_yourself) (Đừng lặp lại chính mình) trong một số trường hợp.
 
-Sometimes, it’s better to repeat a little to keep the code maintainable, rather than building a top-heavy, unwieldy, unnecessarily complicated system that is completely unmaintainable because it is overly complex.
+Đôi khi, tốt hơn hết là nên lặp lại một chút để giữ cho code có thể duy trì được, thay vì xây dựng một hệ thống phức tạp nặng về, khó sử dụng, sự phức tạp không cần thiết vì nó quà phức tạp.
 
-Also, and let me quote [Harry Roberts](https://csswizardry.com/) once again, **pragmatism trumps perfection**. At some point, you will probably find yourself going against the rules described here. If it makes sense, if it feels right, do it. Code is just a means, not an end.
+Ngoài ra, để tôi trích dẫn [Harry Roberts](https://csswizardry.com/) lại một lần nữa, **chủ nghĩ thực dụng hơn hẳn sự hoàn hảo**. Tại một số điểm, bạn có thể sẽ thấy mình đi ngược lại các quy tắc được mô tả ở đây. Nếu nó có ý nghĩa, nếu cảm thấy đúng, làm điều đó. Code chỉ là một phương tiện, không phải là tất cả.
 
-### *Extending The Guidelines*
+### *Mở rộng Guidelines*
 
-A large part of this styleguide is strongly opinionated. I have been reading and writing Sass for several years now, to the point where I now have a lot of principles when it comes to writing clean stylesheets. I understand that it might not please nor suit everybody, and this is perfectly normal.
+Một phần lớn của styleguide này được đánh giá cao. Tôi đã đọc và viết Sass trong vài năm nay, đến mức bây giờ tôi có rất nhiều nguyên tắc khi viết các stylesheet một cách sạch sẽ. Tôi hiểu rằng nó có thể không làm hài lòng cũng không phù hợp với tất cả mọi người, và điều này là hoàn toàn bình thường.
 
-Although, I believe that guidelines are made to be extended. Extending Sass Guidelines could be as simple as having a document stating that the code is following the guidelines from this styleguide except for a few things; in which case, specific rules would be explained below.
+Mặc dù, tôi tin rằng các hướng dẫn được thực hiện để được mở rộng. Việc mở rộng Sass Guideline có thể đơn giản như việc có một tài liệu nói rằng code đang tuân theo các nguyên tắc từ styleguide kiểu này ngoại trừ một vài thứ; trong trường hợp đó, các quy tắc cụ thể sẽ được giải thích bên dưới.
 
-An example of styleguide extension can be found on the [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
+Một ví dụ về tiện ích mở rộng styleguide có thể được tìm thấy trên [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
 
-> This is an extension to [Node Styleguide](https://github.com/felixge/node-style-guide) by Felix Geisendörfer. Anything from this document overrides what could be said in the Node Styleguide.
+> Đây là một phần mở rộng cho [Node Styleguide](https://github.com/felixge/node-style-guide) của Felix Geisendörfer. Bất cứ điều gì từ tài liệu này đều ghi đè lên những gì có thể được nói trong Node Styleguide.
 
 ## Syntax & Formatting
 
