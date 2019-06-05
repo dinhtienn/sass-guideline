@@ -2249,76 +2249,76 @@ If you are not convinced of the necessity to use SCSS-lint, I recommend reading 
 
 ## Too Long; Didn’t Read
 
-These guidelines are quite long and sometimes it is good to have them summed up in a shorter version. Below is this summary.
+Guideline này khá dài và đôi khi thật tốt khi chúng được tóm tắt trong một phiên bản ngắn hơn. Dưới đây là tóm tắt này.
 
 ### *Key Principles*
 
-- Having a styleguide is all about **consistency**. If you disagree with some rules from Sass Guidelines, fair enough as long as you are consistent. [↩](https://sass-guidelin.es/#why-a-styleguide)
-- Sass should be kept as simple as it can be. Avoid building complex systems unless absolutely necessary. [↩](https://sass-guidelin.es/#key-principles)
-- Keep in mind that sometimes *KISS* (Keep It Simple, Stupid) is better than *DRY* (Don’t Repeat Yourself). [↩](https://sass-guidelin.es/#key-principles)
+- Một styleguide tất cả về **tính nhất quán**. Nếu bạn không đồng ý với một số nguyên tắc trong Sass Guidelines, hoàn toàn ổn miễn là bạn nhất quán. [↩](https://sass-guidelin.es/#why-a-styleguide)
+- Sass nên được giữ đơn giản như bản chất của nó. Tránh xây dựng các hệ thống phức tạp trừ khi thực sự cần thiết. [↩](https://sass-guidelin.es/#key-principles)
+- Hãy nhớ rằng đôi khi *KISS* (Giữ cho nó đơn giản, ngu ngốc) sẽ tốt hơn *DRY* (Don’t Repeat Yourself). [↩](https://sass-guidelin.es/#key-principles)
 
 ### *Syntax & Formatting*
 
-- An indentation is made of two (2) spaces, no tabs. [↩](https://sass-guidelin.es/#syntax--formatting)
-- Lines should be, as much as possible, shorter than 80 characters. Feel free to split them into several lines when necessary. [↩](https://sass-guidelin.es/#syntax--formatting)
-- CSS should be properly written, possibly following the [CSS Guidelines](http://cssguidelin.es/)from Harry Roberts. [↩](https://sass-guidelin.es/#syntax--formatting)
-- Whitespace is free, use it to separate items, rules and declarations. Do not hesitate to leave empty lines, it never hurts. [↩](https://sass-guidelin.es/#syntax--formatting)
+- Một indentation được tạo thành từ hai (2) khoảng trắng, không dùng tabs. [↩](https://sass-guidelin.es/#syntax--formatting)
+- Các dòng nên ngắn hơn 80 ký tự. Hãy chia chúng thành nhiều dòng khi cần thiết. [↩](https://sass-guidelin.es/#syntax--formatting)
+- CSS nên được viết đúng, có thể tham khảo và tuân theo  [CSS Guidelines](http://cssguidelin.es/) từ Harry Roberts. [↩](https://sass-guidelin.es/#syntax--formatting)
+- Khoảng trắng là miễn phí, sử dụng nó để phân tách các mục, quy tắc và khai báo. Đừng ngần ngại để lại những dòng trống. [↩](https://sass-guidelin.es/#syntax--formatting)
 
 ###### STRINGS
 
-- Declaring the `@charset` directive on top of the stylesheet is highly recommended. [↩](https://sass-guidelin.es/#encoding)
-- Unless applied as CSS identifiers, strings should be quoted using single quotes. URLs should also be quoted. [↩](https://sass-guidelin.es/#strings-as-css-values)
+- Việc khai báo `@charset` lên đầu stylesheet được khuyến khích cao. [↩](https://sass-guidelin.es/#encoding)
+- Trừ khi được dùng làm định danh CSS, các chuỗi phải được trích dẫn bằng dấu nháy đơn. Các URL cũng nên được trích dẫn. [↩](https://sass-guidelin.es/#strings-as-css-values)
 
 ###### NUMBERS
 
-- Sass makes no distinction between numbers, integers, floats so trailing zeros (0) should be omitted. However, leading zeros (0) help readability and should be added. [↩](https://sass-guidelin.es/#zeros)
-- A zero (0) length should not have a unit. [↩](https://sass-guidelin.es/#units)
-- Units manipulation should be thought as arithmetic operations, not string operations. [↩](https://sass-guidelin.es/#units)
-- In order to improve readability, top-level calculations should be wrapped in parentheses. Also, complex math operations might be splitted into smaller chunks. [↩](https://sass-guidelin.es/#calculations)
-- Magic numbers dramatically hurt code maintainability and should be avoided at all time. When in doubt, extensively explain the questionable value. [↩](https://sass-guidelin.es/#magic-numbers)
+- Sass không phân biệt giữa số, số nguyên và số thực nên các số 0 ở cuối nên được bỏ qua. Tuy nhiên các số 0 đứng đầu giúp dễ đọc và nên được thêm vào. [↩](https://sass-guidelin.es/#zeros)
+- Độ dài 0 không nên có đơn vị. [↩](https://sass-guidelin.es/#units)
+- Thao tác với các đơn vị nên được coi là hoạt động số học, không phải hoạt động chuỗi. [↩](https://sass-guidelin.es/#units)
+- Để cải thiện khả năng đọc, các tính toán cấp cao nhất phải được gói trong ngoặc đơn. Ngoài ra, các phép toán phức tạp có thể được chia thành các phần nhỏ hơn. [↩](https://sass-guidelin.es/#calculations)
+- Magic numbers làm giảm đáng kể khả năng duy trì code và nên tránh bất cứ khi nào. Khi nghi ngờ, hãy giải thích rõ ở phần mở rộng. [↩](https://sass-guidelin.es/#magic-numbers)
 
 ###### COLORS
 
-- Colors should be expressed in HSL when possible, then RGB, then hexadecimal (in a lowercase and shortened form). Color keywords should be avoided. [↩](https://sass-guidelin.es/#color-formats)
-- Prefer `mix(..)` instead of `darken(..)` and `lighten(..)` when lightening or darkening a color. [↩](https://sass-guidelin.es/#lightening-and-darkening-colors)
+- Màu sắc nên được thể hiện bằng HSL khi có thể, sau đó là RGB, sau đó là thập lục phân (ở dạng chữ thường và rút gọn). Từ khoá màu nên tránh. [↩](https://sass-guidelin.es/#color-formats)
+- Hãy dùng `mix(..)` thay vì `darken(..)` và `lighten(..)` khi làm sáng hoặc làm tối một màu. [↩](https://sass-guidelin.es/#lightening-and-darkening-colors)
 
 ###### LISTS
 
-- Unless used as a direct mapping to space-separated CSS values, lists should be separated with commas. [↩](https://sass-guidelin.es/#lists)
-- Wrapping parentheses should also be considered to improve readability. [↩](https://sass-guidelin.es/#lists)
-- Inlined lists should not have a trailing comma, multi-line lists should have it. [↩](https://sass-guidelin.es/#lists)
+- Các list phải được phân tách bằng dấu phảy, trừ khi được sử dụng làm ánh xạ trực tiếp tới các giá trị CSS được phân tách bằng dấu cách. [↩](https://sass-guidelin.es/#lists)
+- Gói bằng dấu ngoặc đơn cũng cần được xem xét để cải thiện khả năng đọc. [↩](https://sass-guidelin.es/#lists)
+- List nội tuyến không nên có dấu phảy, list trên nhiều dòng nên có. [↩](https://sass-guidelin.es/#lists)
 
 ### *MAPS*
 
-- Maps containing more than a single pair are written on several lines. [↩](https://sass-guidelin.es/#maps)
-- To help maintainability, the last pair of a map should have a trailing comma. [↩](https://sass-guidelin.es/#maps)
-- Map keys that happen to be strings should be quoted as any other string. [↩](https://sass-guidelin.es/#maps)
+- Maps chứa nhiều hơn một cặp nên được viết trên nhiều dòng. [↩](https://sass-guidelin.es/#maps)
+- Để tăng khả năng bảo trì, cặp cuối cùng của map cũng nên có dấu phảy. [↩](https://sass-guidelin.es/#maps)
+- Map keys là các chuỗi nên được trích dẫn như bất kỳ chuỗi nào khác. [↩](https://sass-guidelin.es/#maps)
 
 ###### DECLARATION SORTING
 
-- The system used for declaration sorting (alphabetical, by type, etc.) doesn’t matter as long as it is consistent. [↩](https://sass-guidelin.es/#declaration-sorting)
+- Hệ thống được sử dụng để sắp xếp các khai báo(theo bảng chữ cái, theo loại, …) không có vấn đề gì miễn là nó phù hợp. [↩](https://sass-guidelin.es/#declaration-sorting)
 
 ###### SELECTOR NESTING
 
-- Avoid selector nesting when it is not needed (which represents most of the cases). [↩](https://sass-guidelin.es/#selector-nesting)
-- Use selector nesting for pseudo-classes and pseudo-elements. [↩](https://sass-guidelin.es/#selector-nesting)
-- Media queries can also be nested inside their relevant selector. [↩](https://sass-guidelin.es/#selector-nesting)
+- Tránh lồng selector khi không cần thiết (đại diện cho hầu hết các trường hợp). [↩](https://sass-guidelin.es/#selector-nesting)
+- Sử dụng selector lồng nhau cho các lớp giả và các phần tử giả. [↩](https://sass-guidelin.es/#selector-nesting)
+- Media queries cũng có thể được lồng trong selector liên quan của chúng. [↩](https://sass-guidelin.es/#selector-nesting)
 
 ### *Naming Conventions*
 
-- It is best to stick to CSS naming conventions which are (except a few errors) lowercase and hyphen-delimited. [↩](https://sass-guidelin.es/#naming-conventions)
+- Tốt nhất là tuân theo các quy ước đặt tên CSS (trừ một vài lỗi) chữ thường và phân cách bằng dấu gạch nối. [↩](https://sass-guidelin.es/#naming-conventions)
 
 ### *Commenting*
 
-- CSS is a tricky language; do not hesitate to write very extensive comments about things that look (or are) fishy. [↩](https://sass-guidelin.es/#commenting)
-- For variables, functions, mixins and placeholders establishing a public API, use SassDoc comments. [↩](https://sass-guidelin.es/#documentation)
+- CSS là một ngôn ngữ phức tạp, đừng ngần ngại viết ra comment về những thứ trông kinh khủng. [↩](https://sass-guidelin.es/#commenting)
+- Đối với các biến, hàm, mixin và placeholder thiết lập API công khai, hãy sử dụng các comment SassDocs. [↩](https://sass-guidelin.es/#documentation)
 
 ### *Variables*
 
-- Do use the `!default` flag for any variable part of a public API that can be safely changed. [↩](https://sass-guidelin.es/#default-flag)
-- Do not use the `!global` flag at root level as it might constitue a violation of Sass syntax in the future. [↩](https://sass-guidelin.es/#global-flag)
+- Sử dụng `!default` cho bất kỳ phần biến nào của API công khai có thể được thay đổi một cách an toàn. [↩](https://sass-guidelin.es/#default-flag)
+- Không sử dụng `!global` ở cấp độ gốc vì nó có thể tạo ra vi phạm cú pháp Sass trong tương lai. [↩](https://sass-guidelin.es/#global-flag)
 
 ### *Extend*
 
-- Stick to extending placeholders, not existing CSS selectors. [↩](https://sass-guidelin.es/#extend)
-- Extend a placeholder as few times as possible in order to avoid side effects. [↩](https://sass-guidelin.es/#extend)
+- Bám sát việc mở rộng placeholders, không phải các CSS selector hiện có. [↩](https://sass-guidelin.es/#extend)
+- Mở rộng một placeholder càng nhiều lần càng tốt để tránh tác dụng phụ. [↩](https://sass-guidelin.es/#extend)
