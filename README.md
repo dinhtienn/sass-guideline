@@ -8,37 +8,37 @@
 
 ### Dự án Sass Guidelines được dịch sang nhiều ngôn ngữ bởi [những người đóng góp](https://github.com/HugoGiraudel/sass-guidelines/issues/96).
 
-## Về tác giả
+## About The Author
 
-Tên tôi là [Hugo Giraudel](http://hugogiraudel.com/), Tôi là một front-end developer người Pháp, có trụ sở tại Berlin (Đức) từ năm 2015, hiện đang làm việc tại [N26](https://n26.com/).
+Tên tôi là [Hugo Giraudel](http://hugogiraudel.com/), Tôi là một front-end developer người Pháp, gốc ở Berlin (Đức) từ năm 2015, hiện đang làm việc tại [N26](https://n26.com/).
 
 Tôi đã viết Sass được vài năm nay và tôi là tác giả của nhiều dự án liên quan đến Sass như [SassDoc](http://sassdoc.com/), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) và [Sass-Compatibility](http://sass-compatibility.github.io/). Nếu bạn quan tâm nhiều hơn đến những đóng góp của tôi cho cộng đồng Sass, hãy xem qua [danh sách này](http://github.com/HugoGiraudel/awesome-sass).
 
 Tôi cũng là tác giả của một cuốn sách về CSS (bằng tiếng Pháp) có tựa đề [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (phiên bản *Eyrolles*), cũng như một cuốn sách về Sass (bằng Tiếng Anh) có tên [Jump Start Sass](https://learnable.com/books/jump-start-sass) (phiên bản *Learnable*).
 
-## Đóng góp
+## Contributing
 
-Sass Guidelines là một dự án miễn phí mà tôi duy trì trong thời gian rảnh rỗi. Không cần phải nói, đó là một khối công việc khá lớn để giữ cho mọi thứ được cập nhật, được dẫn chứng và thích hợp. Rất may, tôi nhận được sự đóng góp của rất nhiều người tuyệt vời đặc biệt là việc duy trì hàng tá các bản dịch khác nhau. Hãy chắc chắn cảm ơn họ nhé!
+Sass Guidelines là một dự án miễn phí mà tôi duy trì trong thời gian rảnh rỗi. Không cần phải nói, đó là một khối công việc khá lớn để giữ cho mọi thứ được cập nhật, được dẫn chứng và thích hợp. Rất may, tôi nhận được sự đóng góp của rất nhiều người tuyệt vời đặc biệt là việc duy trì hàng tá các bản dịch khác nhau. Hãy chắc chắn rằng cảm ơn họ nhé!
 
-Nếu bạn muốn đóng góp vào dự án, vui lòng tweet về nó, truyền bá hoặc sửa từng lỗi đánh máy nhỏ bằng cách mở ra một issue hoặc pull-request trên [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) sẽ là rất tuyệt vời!
+Nếu bạn muốn đóng góp vào dự án, vui lòng tweet nó, truyền bá hoặc sửa từng lỗi đánh máy nhỏ bằng cách mở ra một issue hoặc pull-request trên [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) sẽ là rất tuyệt vời!
 
 Cuối cùng nhưng không kém phần quan trọng trước khi ta bắt đầu: Nếu bạn thích tài liệu này hoặc nó hữu ích cho bạn hoặc team của bạn, vui lòng xem xét việc hỗ trợ để tôi có thể tiếp tục làm việc với nó!
 
-## Về Sass
+## About Sass
 
 Đây là cách [Sass](http://sass-lang.com/) được mô tả trong [documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html) của nó:
 
 > Sass là một phần mở rộng của CSS tăng thêm sức mạnh và sự thanh lịch tới ngôn ngữ cơ bản.
 
-Mục tiêu cuối cùng của `Sass` là sửa những thiếu xót của CSS. CSS, như chúng ta đã biết, không phải là ngôn ngữ tốt nhất trên thế giới [cần dẫn nguồn]. Mặc dù rất đơn giản để học, nó có thể nhanh chóng trở nên khá lộn xộn, đặc biệt là trong các dự án lớn.
+Mục tiêu cuối cùng của `Sass` là hỗ trợ những thiếu xót của CSS. CSS, như chúng ta đã biết, không phải là ngôn ngữ tốt nhất trên thế giới [cần dẫn nguồn]. Mặc dù rất đơn giản để học, nó có thể nhanh chóng trở nên khá lộn xộn, đặc biệt là trong các dự án lớn.
 
 Đó là lý do Sass xuất hiện, như một meta-language, để cải thiện cú pháp của CSS nhằm cung cấp các tính năng bổ sung và các công cụ tiện dụng. Trong khi đó, Sass muốn bảo tồn về ngôn ngữ CSS.
 
-Điều này không biến Css trở thành một ngôn ngữ lập trình đầy đủ tính năng; Sass chỉ muốn giúp đỡ những nơi CSS thất bại. Chính về điều này, khởi đầu với Sass không khó hơn việc học Css, nó đơn giản là thêm một vài [tính năng bổ sung](http://sitepoint.com/sass-reference/) trên đầu của nó.
+Điều này không biến CSS trở thành một ngôn ngữ lập trình đầy đủ tính năng; Sass chỉ muốn giúp đỡ những nơi CSS thất bại. Chính về điều này, khởi đầu với Sass không khó hơn việc học CSS, nó đơn giản là thêm một vài [tính năng bổ sung](http://sitepoint.com/sass-reference/) trên đầu của nó.
 
-Điều đó nghĩa rằng, có nhiều cách để sử dụng những tính năng này. Một vài chỗ tốt, một vài chỗ tệ, một số bất bình thường. Các hướng dẫn này nhằm cung cấp cho bạn một cách tiếp cận nhất quán và được dẫn chứng rõ ràng để viết code Sass.
+Điều đó có nghĩa rằng, có nhiều cách để sử dụng những tính năng này. Một vài chỗ tốt, một vài chỗ tệ, một số bất bình thường. Các hướng dẫn này nhằm cung cấp cho bạn một cách tiếp cận nhất quán và được dẫn chứng rõ ràng để viết code Sass.
 
-### *Ruby Sass hay LibSass*
+### *Ruby Sass Or LibSass*
 
 [Commit đầu tiên của Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe), trở lại vào cuối năm 2016, hơn 10 năm trước. Không cần phải nói nó đã đi một chặng đường dài kể từ đó. Ban đầu được phát triển trên Ruby, các port khác nhau xuất hiện ở đây đó. Phiên bản thành công nhất, [LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114) (được viết bằng C/C++) hiện đã gần như tương thích hoàn toàn với phiên bản Ruby gốc.
 
@@ -48,11 +48,11 @@ Quay trở lại chọn trình biên dịch. Trên thực tế, tất cả đề
 
 Trong các dự án không phải Ruby cần tích hợp quy trình làm việc, LibSass có lẽ là một ý tưởng tốt hơn vì nó chủ yếu dành riêng cho việc được bao bọc. Vì vậy, nếu bạn muốn sử dụng, cùng nói về Node.js [node-sass](https://github.com/sass/node-sass) đều được chọn.
 
-### *Sass hay SCSS*
+### *Sass or SCSS*
 
 Có khá nhiều nhầm lẫn về ngữ nghĩa của cái tên *Sass*, và câu trả lời xác đáng nhất: Sass mang nghĩa là cả bộ tiền xử lý và cú pháp của chính nó. Có vẻ nó không thích hợp lắm phải không?
 
-Bạn thấy đấy, Sass ban đầu mô tả một cú pháp trong đó sự hạn chế riêng biệt chính là sự nhạy cảm lõm vào của nó. Ngay sau đó, những người duy trì Sass đã quyết định thu hẹo khoảng cách giữa Sass và CSS bằng cách cung cấp một cú pháp thân thiện với CSS có tên là *SCSS* nghĩa là *Sassy CSS*. Phương châm của nó là: nếu CSS hợp lệ, SCSS cũng hợp lệ.
+Bạn thấy đấy, Sass ban đầu mô tả một cú pháp trong đó sự hạn chế riêng biệt chính là sự nhạy cảm indent của nó. Ngay sau đó, những người duy trì Sass đã quyết định thu hẹp khoảng cách giữa Sass và CSS bằng cách cung cấp một cú pháp thân thiện với CSS có tên là *SCSS* nghĩa là *Sassy CSS*. Phương châm của nó là: nếu CSS hợp lệ, SCSS cũng hợp lệ.
 
 Kể từ đó, Sass (bộ tiền xử lý) đã cung cấp [hai cú pháp khác nhau](http://www.sitepoint.com/whats-difference-sass-scss/): Sass (not all-caps, [please](http://sassnotsass.com/)), còn được gọi là *cú pháp thụt lề*, và SCSS. Sử dụng cái nào là tuỳ thuộc vào bạn vì cả hai đều tương đương nhau về tính năng. Nó chỉ là vấn đề thẩm mỹ tại thời điểm này.
 
@@ -62,11 +62,11 @@ Cá nhân tôi, thích SCSS hơn Sass vì nó gần với CSS hơn và thân thi
 
 ### *Các bộ tiền xử lý khác*
 
-Sass là một tiền xử lý trong số khác. Đối thủ nặng ký nhất của nó là [Less](http://lesscss.org/), một bộ tiền xử lý dựa trên Node.js đã trở nên khá phổ biến nhờ khung CSS nổi tiếng [Bootstrap](http://getbootstrap.com/) sử dụng nó (cho đến phiên bản 4). Ngoài ra còn có [Stylus](http://learnboost.github.io/stylus/), một bộ tiền xử lý rất dễ được chấp nhận và linh hoạt tuy nhiên hơi khó sử dụng và với một cộng đồng nhỏ hơn.
+Sass là một tiền xử lý trong số những bộ tiền xử lý khác. Đối thủ nặng ký nhất của nó là [Less](http://lesscss.org/), một bộ tiền xử lý dựa trên Node.js đã trở nên khá phổ biến nhờ khung CSS nổi tiếng [Bootstrap](http://getbootstrap.com/) sử dụng nó (cho đến phiên bản 4). Ngoài ra còn có [Stylus](http://learnboost.github.io/stylus/), một bộ tiền xử lý rất dễ được chấp nhận và linh hoạt tuy nhiên hơi khó sử dụng và với một cộng đồng nhỏ hơn.
 
 *Tại sao lại chọn Sass hơn bất kỳ bộ tiền xử lý nào khác?* vẫn là một câu hỏi xác đáng ngày nay. Cách đây không lâu, chúng tôi đã từng đề xuất Sass cho các dự án dựa trên Ruby vì nó lần đầu tiên được tạo ra trong Ruby và kết hợp tốt với Ruby on Rails. Hiện tại LibSass đã bắt kịp (chủ yếu) với Sass ban đầu, đây không còn là lời khuyên thích hợp.
 
-Những gì tôi thích ở Sass là cách tiếp cận bảo toàn của nó với CSS. Thiết kế của Sass dựa trên các nguyên tắc mạnh mẽ: phần lớn phương pháp thiết kế xuất phát tự nhiên từ niềm tin của các team cốt lõi rằng thêm các tính năng bổ sung có chi phí phức tạp cần được chứng minh bằng tính hữu dụng và về những gì một block style cho trước đang làm bằng cách chỉ nhìn vào riêng khối đó. Ngoài ra, Sass có sự chú ý sắc nét hơn nhiều so với các bộ tiền xử lý khác. theo tôi, có thể nói rằng các nhà thiết kế cốt lõi quan tâm sâu sắc đến việc hỗ trợ mọi trường hợp tương thích CSS và đảm bảo mọi hành vi chung đều nhất quán. Nói cách khác, Sass là một phần mềm nhằm giải quyết các vấn đề thực tế, giúp cung cấp chức năng hữu ích cho những thiếu xót của CSS.
+Những gì tôi thích ở Sass là cách tiếp cận bảo toàn của nó với CSS. Thiết kế của Sass dựa trên các nguyên tắc mạnh mẽ: phần lớn phương pháp thiết kế xuất phát tự nhiên từ niềm tin của các team cốt lõi rằng thêm các tính năng bổ sung có chi phí phức tạp cần được chứng minh bằng tính hữu dụng và về những gì một block style cho trước đang làm bằng cách chỉ nhìn vào riêng khối đó. Ngoài ra, Sass có sự chú ý sắc nét hơn nhiều so với các bộ tiền xử lý khác. Theo tôi, có thể nói rằng các nhà thiết kế cốt lõi quan tâm sâu sắc đến việc hỗ trợ mọi trường hợp tương thích CSS và đảm bảo mọi hành vi chung đều nhất quán. Nói cách khác, Sass là một phần mềm nhằm giải quyết các vấn đề thực tế, giúp cung cấp chức năng hữu ích cho những thiếu xót của CSS.
 
 Bỏ qua các bộ tiền xử lý, chúng ta cũng nên đề cập đến các công cụ như [PostCSS](https://github.com/postcss/postcss) và [cssnext](https://cssnext.github.io/) đã tiếp xúc đáng kể trong vài tháng qua.
 
@@ -104,7 +104,7 @@ Không cần phải nói, càng có nhiều developer tham gia vào một dự �
 
 Ngoài ra, đây là styleguide của riêng tôi và do đó nó **rất opinionated**. Hãy nghĩ về nó như một bộ sưu tập các phương pháp và lời khuyên mà tôi đã đánh bóng và đưa ra trong nhiều năm. Nó cũng cho tôi cơ hội liên kết với một số ít tài nguyên sâu sắc, vì vậy hãy chắc chắn kiểm tra qua *bài đọc thêm*.
 
-Rõ ràng, đây chắc chắn không phải là cách duy nhất để làm việc, và nó có thể có hoặc không phù hợp với dự án của bạn. Hãy chọn từ nó những thứ thích ứng với nhu cầu của bạn. Như ta vẫn thường nói *your mileage may vary*.
+Rõ ràng, đây chắc chắn không phải là cách duy nhất để làm việc, và nó có thể có hoặc không phù hợp với dự án của bạn. Hãy chọn từ nó những thứ thích hợp với nhu cầu của bạn. Như ta vẫn thường nói *your mileage may vary*.
 
 ### *Những nguyên tắc chủ chốt*
 
@@ -781,17 +781,17 @@ Như với tất cả mọi thứ, các chi tiết cụ thể có phần không 
 
 ## Naming Conventions
 
-In this section, we will not deal with the best CSS naming conventions for maintainability and scale; not only is that up to you, it’s also out of the scope of a Sass styleguide. I suggest those recommended by [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+Trong phần này, chúng tôi sẽ không giải quyết các quy ước đặt tên CSS tốt nhất về khả năng duy trì và mở rộng; ngoài việc tùy thuộc vào bạn, nó còn nằm ngoài phạm vi của một Sass styleguide. Tôi đề xuất những bài viết theo [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
-There are a few things you can name in Sass, and it is important to name them well so the whole code base looks both consistent and easy to read:
+Có một vài thứ bạn có thể đặt tên trong Sass và điều quan trọng là phải đặt tên cho chúng thật tốt để toàn bộ codebase trông vừa nhất quán vừa dễ đọc:
 
-- variables;
-- functions;
-- mixins.
+- Biến;
+- Hàm;
+- Mixin.
 
-Sass placeholders are deliberately omitted from this list since they can be considered as regular CSS selectors, thus following the same naming pattern as classes.
+Các Sass placeholder được cố tình bỏ qua khỏi danh sách này vì chúng có thể được coi là các CSS selector thông thường, do đó tuân theo cùng kiểu đặt tên như các lớp.
 
-Regarding variables, functions and mixins, we stick to something very *CSS-y*: **lowercase hyphen-delimited**, and above all meaningful.
+Về các biến, hàm và mixin, chúng tôi dính vào một cái gì đó rất *CSS-y*: **chữ viết thường được phân cách bằng dấu gạch ngang**, và trên hết là có ý nghĩa.
 
 ```scss
 $vertical-rhythm-baseline: 1.5rem;
@@ -807,9 +807,9 @@ $vertical-rhythm-baseline: 1.5rem;
 
 ### *Constants*
 
-If you happen to be a framework developer or library writer, you might find yourself dealing with variables that are not meant to be updated in any circumstances: constants. Unfortunately (or fortunately?), Sass does not provide any way to define such entities, so we have to stick to strict naming conventions to make our point.
+Nếu bạn tình cờ là một framework developer hoặc nhà văn thư viện, bạn có thể thấy mình xử lý các biến không có nghĩa là được cập nhật trong mọi trường hợp: hằng số. Thật không may (hoặc may mắn thay?), Sass không cung cấp bất kỳ cách nào để xác định các thực thể đó, vì vậy chúng tôi phải tuân theo các quy ước đặt tên nghiêm ngặt để đưa ra quan điểm của mình.
 
-As for many languages, I suggest all-caps snakerized variables when they are constants. Not only is this a very old convention, but it also contrasts well with usual lowercased hyphenated variables.
+Đối với nhiều ngôn ngữ, tôi đề xuất tất cả các biến snakerized khi chúng là hằng số. Đây không chỉ là một quy ước rất cũ, mà nó còn tương phản tốt với các biến gạch nối thấp hơn thông thường.
 
 ```scss
 // Yep
@@ -819,13 +819,13 @@ $CSS_POSITIONS: (top, right, bottom, left, center);
 $css-positions: (top, right, bottom, left, center);
 ```
 
-If you really want to play with the ideas of constants in Sass, you should read [this dedicated article](http://www.sitepoint.com/dealing-constants-sass/).
+Nếu bạn thật sự muốn sử dụng các ý tưởng của hằng số trong Sass, bạn nên đọc [bài viết dành riêng này](http://www.sitepoint.com/dealing-constants-sass/).
 
 ### *Namespace*
 
-If you intend to distribute your Sass code, in the case of a library, a framework, a grid system or whatever, you might want to consider namespacing all your variables, functions, mixins and placeholders so it does not conflict with anyone else’s code.
+Nếu bạn có ý định phân phối code Sass của mình, trong trường hợp thư viện, framework, grid system hoặc bất cứ điều gì, bạn có thể muốn xem xét việc đặt tên cho tất cả các biến, hàm, mixin và placeholder của mình để nó không xung đột với code của bất kỳ ai khác.
 
-For instance, if you work on a *Sassy Unicorn* project that is meant to be distributed, you could consider using `su-` as a namespace. It is specific enough to prevent any naming collisions and short enough not to be a pain to write.
+Ví dụ, nếu bạn làm việc trong dự án *Sassy Unicorn* có nghĩa là được phân phối, bạn có thể xem xét sử dụng `su-` làm namespace. Nó là đủ cụ thể để ngăn chặn bất kỳ xung đột đặt tên và đủ ngắn để không phải là một sự cố gắng để viết.
 
 ```scss
 $su-configuration: ( … );
@@ -835,28 +835,28 @@ $su-configuration: ( … );
 }
 ```
 
-[Kaelig](http://kaelig.fr/) has [a very insightful article about the global CSS namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), in case this topic is of any interest to you.
+[Kaelig](http://kaelig.fr/) có [một bài viết rất sâu sắc về CSS namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), trong trường hợp chủ đề này ngẫu nhiên lại được bạn quan tâm.
 
-<blockquote class="note"><p>Note that automatic namespacing is definitely a design goal for the upcoming <code>@import</code> revamp from Sass 4.0. As that comes closer to fruition, it will become less and less useful to do manual namespacing; eventually, manually namespaced libraries may actually be harder to use.</p></blockquote>
+<blockquote class="note"><p>Lưu ý rằng namespace tự động chắc chắn là một mục tiêu thiết kế cho cải tiến <code>@import</code> sắp tới từ Sass 4.0. Khi nó đến gần hơn với kết quả, nó sẽ ngày càng ít hữu ích hơn để thực hiện namespace thủ công, cuối cùng, các thư viện được đặt tên thủ công thực sự có thể khó sử dụng hơn.</p></blockquote>
 
 ## Commenting
 
-CSS is a tricky language, full of hacks and oddities. Because of this, it should be heavily commented, especially if you or someone else intend to read and update the code 6 months or 1 year from now. Don’t let you or anybody else be in the position of *I-didn’t-write-this-oh-my-god-why*.
+CSS là một ngôn ngữ phức tạp, đầy những thủ thuật và kỳ quặc. Chính vì điều này, nó nên được comment rất nhiều, đặc biệt nếu bạn hoặc ai đó có ý định đọc và cập nhật code 6 tháng hoặc 1 năm kể từ bây giờ. Đừng đặt bạn hoặc bất kỳ ai khác ở vị trí của *I-didn’t-write-this-oh-my-god-why*.
 
-As simple as CSS can get, there is still a lot of room for comments. These could be explaining:
+Đơn giản như CSS có thể nhận được, vẫn còn rất nhiều chỗ để comment. Đây có thể là giải thích:
 
-- the structure and/or role of a file;
-- the goal of a ruleset;
-- the idea behind a magic number;
-- the reason for a CSS declaration;
-- the order of CSS declarations;
-- the thought process behind a way of doing things.
+- Cấu trúc và / hoặc vai trò của một tập tin;
+- Mục tiêu của một quy tắc;
+- Ý tưởng đằng sau một magic number;
+- Lý do cho một thuộc tính CSS;
+- Thứ tự khai báo CSS;
+- Quá trình suy nghĩ đằng sau một cách làm việc.
 
-And I probably forgot a lot of other various reasons as well. Commenting takes very little time when done seamlessly along with the code so do it at the right time. Coming back at a piece of code to comment it is not only completely unrealistic but also extremely annoying.
+Và tôi có lẽ đã quên rất nhiều lý do khác nhau. Comment mất rất ít thời gian khi được thực hiện liền mạch cùng với code vì vậy hãy thực hiện nó đúng lúc. Trở lại với một đoạn code để comment nó không chỉ hoàn toàn phi thực tế mà còn vô cùng khó chịu.
 
 ### *Writing Comments*
 
-Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining the point of the CSS block. This comment also hosts numbered explanations regarding specific parts of the ruleset. For instance:
+Lý tưởng nhất, *bất kỳ* quy tắc CSS nào phải được đi trước bởi một nhận xét kiểu C giải thích đặc điểm của khối CSS. Comment này cũng lưu trữ các giải thích được đánh số liên quan đến các phần cụ thể của quy tắc. Ví dụ:
 
 ```scss
 /**
@@ -872,9 +872,9 @@ Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining th
 }
 ```
 
-Basically everything that is not obvious at first glance should be commented. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
+Về cơ bản mọi thứ không rõ ràng khi thoạt nhìn nên được comment. Không có những thứ như quá nhiều tài liệu. Hãy nhớ rằng bạn không thể *comment quá nhiều*, vì vậy hãy tiếp tục và viết comment cho mọi thứ đáng giá.
 
-When commenting a Sass-specific section, use Sass inline comments instead of a C-style block. This makes the comment invisible in the output, even in expanded mode during development.
+Khi comment một phần dành riêng cho Sass, hãy sử dụng các comment nội tuyến Sass thay vì khối kiểu C. Điều này làm cho comment vô hình ở đầu ra, ngay cả trong chế độ mở rộng trong quá trình phát triển.
 
 ```scss
 // Add current module to the list of imported modules.
@@ -882,11 +882,11 @@ When commenting a Sass-specific section, use Sass inline comments instead of a C
 $imported-modules: append($imported-modules, $module) !global;
 ```
 
-Note that this way of doing things is also supported by CSS Guidelines in its [Commenting](http://cssguidelin.es/#commenting) section.
+Lưu ý rằng cách thực hiện này cũng được CSS Guidelines hỗ trợ trong phần [Commenting](http://cssguidelin.es/#commenting).
 
 ### *Documentation*
 
-Every variable, function, mixin and placeholder that is intended to be reused all over the codebase should be documented as part of the global API using [SassDoc](http://sassdoc.com/).
+Mọi biến, hàm, mixin và placeholder được dự định sẽ được sử dụng lại trên toàn bộ codebase phải được ghi lại như một phần của API toàn cục bằng cách sử dụng [SassDoc](http://sassdoc.com/).
 
 ```scss
 /// Vertical rhythm baseline used all over the code base.
@@ -894,16 +894,16 @@ Every variable, function, mixin and placeholder that is intended to be reused al
 $vertical-rhythm-baseline: 1.5rem;
 ```
 
-<blockquote class="note"><p>Three slashes (<code>/</code>) required.</p></blockquote>
+<blockquote class="note"><p>Ba dấu gạch chéo (<code>/</code>) là cần thiết.</p></blockquote>
 
-SassDoc has two major roles:
+SassDoc có hai vai trò chính:
 
-- forcing standardized comments using an annotation-based system for everything that is part of a public or private API;
-- being able to generate an HTML version of the API documentation by using any of the SassDoc endpoints (CLI tool, Grunt, Gulp, Broccoli, Node…).
+- Buộc các comment được tiêu chuẩn hóa bằng cách sử dụng một hệ thống dựa trên chú thích cho mọi thứ thuộc về API công khai hoặc riêng tư;
+- Có thể tạo phiên bản HTML của tài liệu API bằng cách sử dụng bất kỳ trình dịch SassDoc nào (công cụ CLI, Grunt, Gulp, Broccoli, Node mật).
 
 <figure role="group" style="text-align: center"> <img data-proofer-ignore="" alt="Documentation generated by SassDoc " sizes="100vw" srcset="https://d33wubrfki0l68.cloudfront.net/68a6846edb356c44cb53dda05760797b2d1baf81/c2a92/assets/images/sassdoc-preview_small.png 540w, https://d33wubrfki0l68.cloudfront.net/97984b488095bfee6f2c6e47c500915b665cfe86/5aa53/assets/images/sassdoc-preview_medium.png 900w, https://d33wubrfki0l68.cloudfront.net/c5894fe21ae4828475ba1483a6fb1d94e151a3d5/4d6c5/assets/images/sassdoc-preview_large.png 1200w, https://d33wubrfki0l68.cloudfront.net/a73c466f7ea902521035603506888db0af2c8e3d/0aa5a/assets/images/sassdoc-preview_huge.png 1590w"><figcaption>Documentation generated by SassDoc</figcaption></figure>
 
-Here is an example of a mixin extensively documented with SassDoc:
+Dưới đây là một ví dụ về một mixin được ghi lại rộng rãi với SassDoc:
 
 ```scss
 /// Mixin helping defining both `width` and `height` simultaneously.
