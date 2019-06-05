@@ -130,16 +130,16 @@ Một ví dụ về tiện ích mở rộng styleguide có thể được tìm t
 
 ## Syntax & Formatting
 
-If you ask me, the very first thing a styleguide should do is describe the way we want our code to look.
+Nếu bạn hỏi tôi, chắc chắn điều đầu tiên mà một styleguide nên làm là mô tả cách chúng ta muốn code của mình trông như thế nào.
 
-When several developers are involved in writing CSS on the same project(s), it is only a matter of time before one of them starts doing things their own way. Code guidelines that promote consistency not only prevent this, but also help when it comes to reading and updating the code.
+Khi nhiều developer tham gia viết CSS trên cùng một dự án, vấn đề chỉ còn là thời gian trước khi một trong số họ bắt đầu thực hiện mọi thứ theo cách riêng của họ. Các nguyên tắc code thúc đẩy tính nhất quán không chỉ ngăn chặn điều này mà còn giúp ích khi đọc và cập nhật code.
 
-Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
+Một cách áp đặt, chúng ta sẽ muốn (lấy cảm hứng bởi [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
-- two (2) spaces indents, no tabs;
-- ideally, 80-characters wide lines;
-- properly written multi-line CSS rules;
-- meaningful use of whitespace.
+- Hai (2) khoảng trắng để thụt lề, không có tab;
+- Mỗi dòng không quá 80 ký tự;
+- Viết CSS trên nhiều dòng một cách đúng đắn;
+- Sử dụng khoảng trắng một cách ý nghĩa.
 
 ```scss
 // Yep
@@ -159,11 +159,11 @@ Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es
 
 ### *Strings*
 
-Believe it or not, strings play quite a large role in both CSS and Sass ecosystems. Most CSS values are either lengths or identifiers, so it actually is quite crucial to stick to some guidelines when dealing with strings in Sass.
+Dù bạn có tin hay không, chuỗi đóng vai trò khá lớn trong cả hệ sinh thái CSS và Sass. Hầu hết các giá trị CSS là độ dài hoặc số nhận dạng, vì vậy thực sự rất quan trọng để tuân theo một số nguyên tắc khi xử lý chuỗi trong Sass.
 
 ###### ENDCODING
 
-To avoid any potential issue with character encoding, it is highly recommended to force [UTF-8](http://en.wikipedia.org/wiki/UTF-8) encoding in the [main stylesheet](https://sass-guidelin.es/#main-file) using the `@charset` directive. Make sure it is the very first element of the stylesheet and there is no character of any kind before it.
+Để tránh bất kỳ vấn đề tiềm ẩn nào với mã hoá ký tự (endcoding), thật sự nên đặt bắt buộc mã hoá [UTF-8](http://en.wikipedia.org/wiki/UTF-8) bên trong [main stylesheet](https://sass-guidelin.es/#main-file) sử dụng chỉ thị `@charset`. Hãy chắc chắn rằng đó là yếu tố đầu tiên của stylesheet và không có bất kỳ ký tự nào trước nó.
 
 ```scss
 @charset 'utf-8';
@@ -171,16 +171,16 @@ To avoid any potential issue with character encoding, it is highly recommended t
 
 ###### QUOTES
 
-CSS does not require strings to be quoted, not even those containing spaces. Take font-family names for instance: it doesn’t matter whether you wrap them in quotes for the CSS parser.
+CSS không yêu cầu các chuỗi được trích dẫn (quote), ngay cả những chuỗi chứa khoảng trắng. Lấy tên font-family chẳng hạn: không vấn đề gì nếu bạn bọc chúng trong dấu ngoặc kép cho trình phân tích cú pháp CSS.
 
-Because of this, Sass *also* does not require strings to be quoted. Even better (and *luckily*, you’ll concede), a quoted string is strictly equivalent to its unquoted twin (e.g. `'abc'` is strictly equal to `abc`).
+Chính vì điều này, Sass *cũng* không yêu cầu trích dẫn các chuỗi. Thậm chí tốt hơn (và *may mắn là*, bạn sẽ thừa nhận), một chuỗi được trích dẫn hoàn toàn tương đương với chính nó khi không được trích dẫn (ví dụ: `'abc'` hoàn toàn tương đương với `abc`).
 
-That being said, languages that do not require strings to be quoted are definitely a minority and so, **strings should always be wrapped with single quotes** (`'`) in Sass (single being easier to type than double on *qwerty*keyboards). Besides consistency with other languages, including CSS’ cousin JavaScript, there are several reasons for this choice:
+Vẫn là vấn đề đó, các ngôn ngữ không yêu cầu chuỗi được trích dẫn chắc chắn là thiểu số và bởi vậy **chuỗi phải luôn được đặt trong dấu nháy đơn** (`'`) trong Sass (dấu nháy đơn dễ gõ hơn gấp đôi trên bàn phím *qwerty*). Bên cạnh tính nhất quán với các ngôn ngữ khác, bao gồm Javascript, có một số lý do cho sự lựa chọn này:
 
-- color names are treated as colors when unquoted, which can lead to serious issues;
-- most syntax highlighters will choke on unquoted strings;
-- it helps general readability;
-- there is no valid reason not to quote strings.
+- Tên màu được coi là màu khi không được trích dẫn, có thể dẫn đến các vấn đề nghiêm trọng;
+- Hầu hết các công cụ highlight cú pháp sẽ bị chói trên các chuỗi không được trích dẫn;
+- Nó giúp dễ đọc;
+- Chẳng có lý do nào để không trích dẫn chuỗi.
 
 ```scss
 // Yep
@@ -190,11 +190,11 @@ $direction: 'left';
 $direction: left;
 ```
 
-<blockquote class="note"><p>As per the CSS specifications, the <code>@charset</code> directive should be declared in double quotes <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">to be considered valid</a>. However, Sass takes care of this when compiling to CSS so the authoring has no impact on the final result. You can safely stick to single quotes, even for <code>@charset</code>.</p></blockquote>
+<blockquote class="note"><p>Theo đặc tả CSS, chỉ thị <code>@charset</code> phải được khai báo trong dấu nháy kép để <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">được coi là hợp lệ</a>. Tuy nhiên, Sass quan tâm đến điều này khi biên dịch sang CSS để nguyên tắc này không có tác động đến kết quả cuối cùng, ngay cả đối với <code>@charset</code>.</p></blockquote>
 
-###### STRINGS AS CSS VALUES
+###### STRINGS AS CSS VALUE
 
-Specific CSS values (identifiers) such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
+Các giá trị CSS cụ thể (mã địch danh) như `initial` hoặc `sans-serif` yêu cầu không được trích dẫn. Thật vậy, khai báo `font-family: 'sans-serif'` sẽ âm thầm thất bại vì CSS đang mong đợi một mã định danh, không phải là một chuỗi trích dẫn. Vì điều này, chúng tôi không trích dẫn những giá trị đó.
 
 ```scss
 // Yep
@@ -207,13 +207,11 @@ $font-type: 'sans-serif';
 $font-type: unquote('sans-serif');
 ```
 
-Hence, we can make a distinction between strings intended to be used as CSS values (CSS identifiers) like in the previous example, and strings when sticking to the Sass data type, for instance map keys.
-
-We don’t quote the former, but we do wrap the latter in single quotes.
+Do đó, ta có thể phân biệt giữa các chuỗi dự định được sử dụng làm giá trị CSS (số nhận dạng CSS) như trong ví dụ trước và chuỗi khi dính vào loại dữ liệu Sass, ví dụ như các map key.
 
 ###### STRINGS CONTAINING QUOTES
 
-If a string contains one or several single quotes, one might consider wrapping the string with double quotes (`"`) instead, in order to avoid escaping characters within the string.
+Nếu một chuỗi chứa một hoặc một vài dấu nháy đơn, người ta có thể xem xét việc bọc chuỗi bằng dấu nháy kép ( " ) thay vào đó, để tránh mất các ký tự trong chuỗi.
 
 ```scss
 // Okay
@@ -239,11 +237,11 @@ If a string contains one or several single quotes, one might consider wrapping t
 
 ### *NUMBERS*
 
-In Sass, number is a data type including everything from unitless numbers to lengths, durations, frequencies, angles and so on. This allows calculations to be run on such measures.
+Trong Sass, số là một loại dữ liệu bao gồm mọi thứ, từ số đơn vị đến độ dài, thời lượng, tần số, góc và hơn thế nữa. Điều này cho phép tính toán được chạy trên các biện pháp như vậy.
 
 ###### ZEROS
 
-Numbers should display leading zeros before a decimal value less than one. Never display trailing zeros.
+Các số sẽ hiển thị số 0 đứng đầu trước một giá trị thập phân nhỏ hơn 1. Không bao giờ chỉ hiển thị số đó.
 
 ```scss
 // Yep
@@ -259,11 +257,11 @@ Numbers should display leading zeros before a decimal value less than one. Never
 }
 ```
 
-<blockquote class="note"><p>In Sublime Text and other editors providing a regular-expression powered search and replace, it is very easy to add a leading zero to (most if not all) float numbers. Simply replace <code>\s+\.(\d+)</code> with <code>\ 0.$1</code>. Do not forget the space before the <code>0</code> though.</p></blockquote>
+<blockquote class="note"><p>Trong Sublime Text và các trình soạn thảo khác cung cấp việc search và replace biểu thứ chính quy, rất dễ dàng để thêm một số 0 đứng đầu. Chỉ cần thay thế <code>\s+\.(\d+)</code> bằng <code>\ 0.$1</code>. Đừng quên khoảng trống trước <code>0</code>.</p></blockquote>
 
 ###### UNITS
 
-When dealing with lengths, a `0` value should never ever have a unit.
+Khi xử lý độ dài, giá trị `0` sẽ không bao giờ có đơn vị.
 
 ```scss
 // Yep
@@ -273,11 +271,11 @@ $length: 0;
 $length: 0em;
 ```
 
-<blockquote class="note"><p>Beware, this practice should be limited to lengths only. Having a unitless zero for a time property such as <code>transition-delay</code> is not allowed. Theoretically, if a unitless zero is specified for a duration, the declaration is deemed invalid and should be discarded. Not all browsers are that strict, but some are. Long story short: only omit the unit for lengths.</p></blockquote>
+<blockquote class="note"><p>Hãy cẩn thận, ví dụ này chỉ nên giới hạn về độ dài. Không có đơn vị cho 0 ở một thuộc tính thời gian như <code>transition-delay</code> là không được phép. Về mặt lý thuyết, nếu một số 0 đơn vị được chỉ định trong một khoảng thời gian, khai báo được coi là không hợp lệ và cần được loại bỏ. Không phải tất cả các trình duyệt đều nghiêm ngặt, ngoài một vài trong số đó. Tóm gọn vấn đề: chỉ bỏ qua đơn vị cho độ dài.</p></blockquote>
 
-The most common mistake I can think of regarding numbers in Sass, is thinking that units are just some strings that can be safely appended to a number. While that sounds true, it is certainly not how units work. Think of units as algebraic symbols. For instance, in the real world, multiplying 5 inches by 5 inches gives you 25 square inches. The same logic applies to Sass.
+Lỗi phổ biến nhất tôi có thể nói về các con số trong Sass là nghĩ rằng các đơn vị chỉ là một vài chuỗi có thể được nối một cách an toàn vào một số. Trong khi điều đó nghe có vẻ  đúng nhưng thật sự đó chắc chắn không phải là cách các đơn vị làm việc. Hãy nghĩ về các đơn vị như các ký tự đại số. Chẳng hạn, trong thế giới thực, nhân 5 inch với 5 inch cho bạn 25 inch vuông. Logic tương tự áp dụng cho Sass.
 
-To add a unit to a number, you have to multiply this number by *1 unit*.
+Để thêm một đơn vị vào một số, bạn phải nhân số này với *1 đơn vị*.
 
 ```scss
 $value: 42;
@@ -289,7 +287,7 @@ $length: $value * 1px;
 $length: $value + px;
 ```
 
-Note that adding *0 member of that unit* also works, but I would rather recommend the aforementioned method since adding *0 unit* can be a bit confusing. Indeed, when trying to convert a number to another compatible unit, adding 0 will not do the trick. More on that [in this article](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
+Lưu ý rằng việc thêm *0 vào đơn vị đó* cũng hoạt động, nhưng tôi muốn giới thiệu phương pháp đã nói ở trên vì việc thêm *0 đơn vị* có thể hơi khó hiểu. Thật vậy, khi cố gắng chuyển đổi một số sang một đơn vị tương thích khác, việc thêm 0 sẽ không thực hiện được. Đọc thêm về điều đó [trong bài viết này](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 ```scss
 $value: 42 + 0px;
@@ -302,9 +300,9 @@ $value: 0px + 1in;
 // -> 96px
 ```
 
-In the end, it really depends on what you are trying to achieve. Just keep in mind that adding the unit as a string is not a good way to proceed.
+Sau cùng, nó thực sự phụ thuộc vào những gì bạn đang cố gắng để đạt được. Chỉ cần lưu ý rằng việc thêm đơn vị dưới dạng chuỗi không phải là một cách tốt nhất để tiến hành.
 
-To remove the unit of a value, you have to divide it by *one unit of its kind*.
+Để xoá đơn vị của một giá trị, bạn phải chia nó cho *một đơn vị thuộc cùng loại*.
 
 ```scss
 $length: 42px;
@@ -316,11 +314,11 @@ $value: $length / 1px;
 $value: str-slice($length + unquote(''), 1, 2);
 ```
 
-Appending a unit as a string to a number results in a string, preventing any additional operation on the value. Slicing the numeric part of a number with a unit also results in a string. This is not what you want. [Use lengths, not strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
+Việc thêm một đơn vị dưới dạng một chuỗi vào một số dẫn đến một chuỗi, ngăn chặn mọi hoạt động bổ sung trên giá trị. Cắt phần số của một số bằng một đơn vị cũng dẫn đến một chuỗi. Đây không phải điều bạn mong muốn. [Sử dụng độ dài, thay vì chuỗi](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ###### CALCULATIONS
 
-**Top-level numeric calculations should always be wrapped in parentheses**. Not only does this requirement dramatically improve readability, it also prevents some edge cases by forcing Sass to evaluate the contents of the parentheses.
+**Các phép tính số cấp cao nhất phải luôn được bọc trong ngoặc đơn**. Yêu cầu này không chỉ cải thiện đáng kể khả năng đọc, nó còn ngăn chặn một số trường hợp ưu tiên bằng cách buộc Sass phải đánh giá nội dung của dấu ngoặc đơn.
 
 ```scss
 // Yep
@@ -336,9 +334,9 @@ Appending a unit as a string to a number results in a string, preventing any add
 
 ###### MAGIC NUMBERS
 
-“Magic number” is an [old school programming](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term for *unnamed numerical constant*. Basically, it’s just a random number that happens to *just work*™ yet is not tied to any logical explanation.
+“Magic number” là một thuật ngữ [old school programming](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) dành cho *những hằng số không được đặt tên*. Về cơ bản, nó chỉ là một số ngẫu nhiên xảy ra với  *just work*™ mà không bị ràng buộc bởi bất kỳ lời giải thích hợp lý nào.
 
-Needless to say **magic numbers are a plague and should be avoided at all costs**. When you cannot manage to find a reasonable explanation for why a number works, add an extensive comment explaining how you got there and why you think it works. Admitting you don’t know why something works is still more helpful to the next developer than them having to figure out what’s going on from scratch.
+Không cần phải nói **magic number là một "bệnh dịch" và nên tránh bằng mọi giá**. Khi bạn không thể quản lý để tìm một lời giải thích hợp lý cho lý do tại sao một số tồn tại và hoạt động như thế nào, hãy thêm một nhận xét mở rộng giải thích cách bạn dùng nó và tại sao bạn nghĩ rằng nó hoạt động. Việc thừa nhận bạn không biết tại sao một cái gì đó hoạt động vẫn hữu ích hơn cho các developer tiếp theo hơn là họ phải tìm hiểu những gì diễn ra từ đầu
 
 ```scss
 /**
@@ -350,13 +348,13 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
 }
 ```
 
-On topic, CSS-Tricks has a [terrific article](http://css-tricks.com/magic-numbers-in-css/) about magic numbers in CSS that I encourage you to read.
+Về chủ đề này, CSS-Tricks có [một bài viết tuyệt vời](http://css-tricks.com/magic-numbers-in-css/) về các magic number trong CSS mà tôi khuyến khích các bạn nên đọc nó.
 
 ### *Colors*
 
-Colors occupy an important place in the CSS language. Naturally, Sass ends up being a valuable ally when it comes to manipulating colors, mostly by providing a handful of [powerful functions](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+Màu sắc chiếm một vị trí quan trọng trong CSS. Đương nhiên, Sass trở nên hữu ích khi thao túng màu sắc, chủ yếu bằng cách cung cấp một số [powerful functions](http://sass-lang.com/documentation/Sass/Script/Functions.html).
 
-Sass is so useful when it comes to manipulating colors that articles have flourished all over the internet about this very topic. May I recommend a few reads:
+Sass rất hữu ích khi xử lý màu sắc mà các bài viết đã phát triển mạnh mẽ trên Internet về chính chủ đề này. Tôi sẽ giới thiệu một vài bài đọc:
 
 - [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
 - [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
@@ -364,19 +362,19 @@ Sass is so useful when it comes to manipulating colors that articles have flouri
 
 ###### COLOR FORMATS
 
-In order to make colors as simple as they can be, my advice would be to respect the following order of preference for color formats:
+Để làm cho màu sắc đơn giản nhất có thể, lời khuyên của tôi là hãy tôn trọng thứ tự ưu tiên sau đây cho các định dạng màu:
 
 1. [HSL notation](http://en.wikipedia.org/wiki/HSL_and_HSV);
 2. [RGB notation](http://en.wikipedia.org/wiki/RGB_color_model);
-3. Hexadecimal notation (lowercase and shortened).
+3. Hexadecimal notation (chữ thường và viết tắt).
 
-CSS color keywords should not be used, unless for rapid prototyping. Indeed, they are English words and some of them do a pretty bad job at describing the color they represent, especially for non-native speakers. On top of that, keywords are not perfectly semantic; for instance `grey` is actually darker than `darkgrey`, and the confusion between `grey` and `gray` can lead to inconsistent usages of this color.
+Từ khóa CSS color không nên được sử dụng, trừ khi tạo mẫu nhanh. Thật vậy, chúng là những từ tiếng Anh và một trong số chúng hoạt động khá tệ trong việc mô tả màu sắc mà chúng đại diện, đặc biệt là đối với những người không phải là người bản xứ. Trên hết, các từ khóa không phải là ngữ nghĩa hoàn hảo; ví dụ `grey` thực sự tối hơn` darkgrey` và sự nhầm lẫn giữa` grey` và` gray` có thể dẫn đến việc sử dụng màu sắc không nhất quán này.
 
-The HSL representation is not only the easiest one for the human brain to comprehend[citation needed], it also makes it easy for stylesheet authors to tweak the color by adjusting the hue, saturation and lightness individually.
+Đại diện HSL không chỉ dễ hiểu nhất đối với bộ não con người [cần dẫn nguồn], nó còn giúp những người viết stylesheet dễ dàng điều chỉnh màu sắc bằng cách điều chỉnh sắc thái, độ bão hòa và độ sáng riêng lẻ.
 
-RGB still has the benefit of showing right away if the color is more of a blue, a green or a red. Therefore it might be better than HSL in some situations, especially when describing a pure red, green or blue. Although it does not make it easy to build a color from the three parts.
+RGB vẫn có lợi ích hiển thị ngay lập tức nếu màu sắc nhiều hơn màu xanh lam, xanh lục hoặc đỏ. Do đó, nó có thể tốt hơn HSL trong một số tình huống, đặc biệt là khi mô tả màu đỏ, xanh lá cây hoặc xanh lam thuần khiết. Mặc dù không làm cho nó dễ dàng để xây dựng một màu từ ba phần.
 
-Lastly, hexadecimal is close to indecipherable for the human mind. Use it only as a last resort if you have to.
+Cuối cùng, thập lục phân gần với không thể giải mã được cho tâm trí con người. Sử dụng nó chỉ là phương sách cuối cùng nếu bạn bắt buộc phải làm vậy.
 
 ```scss
 // Yep
@@ -405,7 +403,7 @@ Lastly, hexadecimal is close to indecipherable for the human mind. Use it only a
 }
 ```
 
-When using HSL or RGB notation, always add a single space after a comma (`,`) and no space between parentheses (`(`, `)`) and content.
+Khi sử dụng ký hiệu HSL hoặc RGB, luôn luôn thêm một khoảng trắng sau dấu phẩy (`,`) và không có khoảng trắng giữa dấu ngoặc đơn (`(`, `)`) và nội dung.
 
 ```scss
 // Yep
@@ -423,31 +421,31 @@ When using HSL or RGB notation, always add a single space after a comma (`,`) an
 
 ###### COLORS AND VARIABLES
 
-When using a color more than once, store it in a variable with a meaningful name representing the color.
+Khi sử dụng một màu nhiều lần, lưu trữ nó trong một biến có tên có ý nghĩa đại diện cho màu.
 
 ```scss
 $sass-pink: hsl(330, 50%, 60%);
 ```
 
-Now you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it in another variable with a name explaining how it should be used.
+Bây giờ bạn có thể tự do sử dụng biến này bất cứ nơi nào bạn muốn. Tuy nhiên, nếu việc sử dụng của bạn được liên kết chặt chẽ với một theme, tôi sẽ khuyên bạn không nên sử dụng biến như hiện tại. Thay vào đó, lưu trữ nó trong một biến khác với một tên giải thích cách sử dụng nó.
 
 ```scss
 $main-theme-color: $sass-pink;
 ```
 
-Doing this would prevent a theme change leading to something like `$sass-pink: blue`. [This article](http://davidwalsh.name/sass-color-variables-dont-suck) does a good job at explaining why thinking your color variables through is important.
+Làm điều này sẽ ngăn việc thay đổi theme tạo ra một cái gì đó như `$sass-Pink: blue`. [Bài viết này](http://davidwalsh.name/sass-color-variables-dont-suck) thực hiện tốt để giải thích lý do tại sao đặt tên biến ý nghĩa cho màu của bạn là quan trọng.
 
 ###### LIGHTENING AND DARKENING COLORS
 
-Both [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) functions manipulate the lightness of a color in the HSL space by adding to or subtracting from the lightness in the HSL space. Basically, they are nothing but aliases for the `$lightness` parameter of the [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) function.
+Cả hàm [`lighten`](http://sass-lang.com/documentation/Sass/Script/Fiances.html#lighten-instance_method) và [` darken`](http://sass-lang.com/documentation/ Các hàm Sass / Script / Function.html # darken-instance_method) đều điều khiển độ sáng của màu trong không gian HSL bằng cách thêm hoặc bớt đi độ sáng trong không gian HSL. Về cơ bản, chúng không là gì ngoài các bí danh cho tham số `$lightness` của hàm [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Fiances.html#adjust_color-instance_method).
 
-The thing is, those functions often do not provide the expected result. On the other hand, the [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) function is a nice way to lighten or darken a color by mixing it with either `white` or `black`.
+Vấn đề là, những chức năng đó thường không cung cấp kết quả như mong đợi. Mặt khác, hàm [`mix`](http://sass-lang.com/documentation/Sass/Script/Fiances.html#mix-instance_method) là một cách hay để làm sáng hoặc làm tối màu bằng cách trộn nó với `white` hoặc `black`.
 
-The benefit of using `mix` rather than one of the two aforementioned functions is that it will progressively go to black (or white) as you decrease the proportion of the color, whereas `darken` and `lighten` will quickly blow out a color all the way to black or white.
+Lợi ích của việc sử dụng `mix` thay vì một trong hai chức năng đã nói ở trên là nó sẽ dần dần chuyển sang màu đen (hoặc trắng) khi bạn giảm tỷ lệ màu, trong khi` darken` và` lighten` sẽ nhanh chóng làm mất màu tất cả các con đường tạo ra black hoặc white.
 
-<figure role="group" style="text-align: center"> <img data-proofer-ignore="" alt="Illustration of the difference between lighten/darken and mix by KatieK " sizes="100vw" srcset="https://d33wubrfki0l68.cloudfront.net/0e167d952ec2ef84b901bbd9359fe0f435df731d/ab9d2/assets/images/lighten-darken-mix_small.png 540w, https://d33wubrfki0l68.cloudfront.net/2823b2267df2e182238c6a7b794e686091e479b8/10273/assets/images/lighten-darken-mix_medium.png 900w, https://d33wubrfki0l68.cloudfront.net/647b61db27c04e41d5ceaadacf7b32c8fc340a76/1d675/assets/images/lighten-darken-mix_large.png 1200w, https://d33wubrfki0l68.cloudfront.net/61202ec6c279f628010a14f25445ce99a0004f5e/9d157/assets/images/lighten-darken-mix_huge.png 1590w"><figcaption>Illustration of the difference between <code class="highlighter-rouge">lighten</code>/<code class="highlighter-rouge">darken</code> and <code class="highlighter-rouge">mix</code> by <a href="http://codepen.io/KatieK2/pen/tejhz/">KatieK</a></figcaption></figure>
+<figure role="group" style="text-align: center"> <img data-proofer-ignore="" alt="Illustration of the difference between lighten/darken and mix by KatieK " sizes="100vw" srcset="https://d33wubrfki0l68.cloudfront.net/0e167d952ec2ef84b901bbd9359fe0f435df731d/ab9d2/assets/images/lighten-darken-mix_small.png 540w, https://d33wubrfki0l68.cloudfront.net/2823b2267df2e182238c6a7b794e686091e479b8/10273/assets/images/lighten-darken-mix_medium.png 900w, https://d33wubrfki0l68.cloudfront.net/647b61db27c04e41d5ceaadacf7b32c8fc340a76/1d675/assets/images/lighten-darken-mix_large.png 1200w, https://d33wubrfki0l68.cloudfront.net/61202ec6c279f628010a14f25445ce99a0004f5e/9d157/assets/images/lighten-darken-mix_huge.png 1590w"><figcaption>Minh hoạ về sự khác biệt giữa <code class="highlighter-rouge">lighten</code>/<code class="highlighter-rouge">darken</code> và <code class="highlighter-rouge">mix</code> bởi <a href="http://codepen.io/KatieK2/pen/tejhz/">KatieK</a></figcaption></figure>
 
-If you don’t want to write the `mix` function every time, you can create two easy-to-use functions `tint` and `shade` (which are also a part of [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) to do the same thing:
+Nếu bạn không muốn viết hàm `mix` nhiều lần, bạn có thể tạo ra hai hàm dễ sử dụng `tint` và `shade` (cũng là một phần của [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) để làm điều tương tự.
 
 ```scss
 /// Slightly lighten a color
@@ -469,19 +467,19 @@ If you don’t want to write the `mix` function every time, you can create two e
 }
 ```
 
-<blockquote class="note"><p>The <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> function is designed to scale properties more fluidly by taking into account how high or low they already are. It should provide results that are as nice as <code>mix</code>’s but with a clearer calling convention. The scaling factor isn’t exactly the same though.</p></blockquote>
+<blockquote class="note"><p>Hàm <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> được thiết kế để chia tỷ lệ các thuộc tính dễ dàng hơn bằng cách tính đến mức độ cao hay thấp của chúng. Nó sẽ cung cấp kết quả tốt như <code>mix</code> nhưng với quy ước rõ ràng hơn. Mặc dù các yếu tố tỷ lệ là hoàn toàn giống nhau.</p></blockquote>
 
 ### *Lists*
 
-Lists are the Sass equivalent of arrays. A list is a flat data structure (unlike [maps](https://sass-guidelin.es/#maps)) intended to store values of any type (including lists, leading to nested lists).
+Lists trong Sass tương đương với array. list là một cấu trúc dữ liệu phẳng (không giống như [map](https://sass-guidelin.es/#maps)) nhằm lưu trữ các giá trị thuộc bất kỳ loại nào (bao gồm cả list, hay nested list)
 
-Lists should respect the following guidelines:
+Lists cần tôn trọng các nguyên tắc sau:
 
-- either inlined or multilines;
-- necessarily on multilines if too long to fit on an 80-character line;
-- unless used as is for CSS purposes, always comma separated;
-- always wrapped in parenthesis;
-- trailing comma if multilines, not if inlined.
+- Hoặc nội tuyến hoặc đa dòng;
+- Nhất thiết phải trên đa dòng nếu quá dài để phù hợp với dòng 80 ký tự;
+- Luôn được phân tách bằng dấu phẩy, trừ khi được sử dụng cho mục đích CSS;
+- Luôn được gói trong ngoặc đơn;
+- Phải có dấu phẩy cuối nếu trên đa dòng, không cần nếu là nội tuyến.
 
 ```scss
 // Yep
@@ -504,7 +502,7 @@ $font-stack: 'Helvetica', 'Arial', sans-serif;
 $font-stack: ('Helvetica', 'Arial', sans-serif,);
 ```
 
-When adding new items to a list, always use the provided API. Do not attempt to add new items manually.
+Khi thêm các mục mới vào list, luôn sử dụng API được cung cấp. Đừng cố thêm các mục mới bằng tay.
 
 ```scss
 $shadows: (0 42px 13.37px hotpink);
@@ -516,24 +514,24 @@ $shadows: append($shadows, $shadow, comma);
 $shadows: $shadows, $shadow;
 ```
 
-In [this article](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/), I go through a lot of tricks and tips to handle and manipulate lists correctly in Sass.
+Trong [bài viết này](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/), tôi có thử qua rất nhiều thủ thuật và mẹo để xử lý và thao tác list chính xác trong Sass.
 
 ### *Maps*
 
-With Sass, stylesheet authors can define maps — the Sass term for associative arrays, hashes or even JavaScript objects. A map is a data structure associating keys to values. Both keys and values can be of any data type, including maps although I would not recommend using complex data types as map keys, if only for the sake of sanity.
+Với Sass, những người viết stylesheet có thể định nghĩa các map - thuật ngữ Sass cho các associative array, hash hoặc thậm chí các JavaScript object. Map là cấu trúc dữ liệu liên kết các khóa với các giá trị. Cả khóa và giá trị có thể thuộc bất kỳ loại dữ liệu nào, kể cả map mặc dù tôi không khuyến nghị sử dụng các loại dữ liệu phức tạp làm khóa của map, nếu chỉ vì mục đích chuẩn mực.
 
-Maps should be written as follows:
+Map nên được viết như sau:
 
-- space after the colon (`:`);
-- opening brace (`(`) on the same line as the colon (`:`);
-- **quoted keys** if they are strings (which represents 99% of the cases);
-- each key/value pair on its own new line;
-- comma (`,`) at the end of each key/value;
-- **trailing comma** (`,`) on last item to make it easier to add, remove or reorder items;
-- closing brace (`)`) on its own new line;
-- no space or new line between closing brace (`)`) and semi-colon (`;`).
+- Space sau dấu hai chấm (`:`);
+- Dấu ngoặc mở (`(`) trên cùng dòng với dấu hai chấm (`:`);
+- **Các khóa được trích dẫn** nếu chúng là các chuỗi (đại diện cho 99% các trường hợp);
+- Mỗi cặp khóa / giá trị trên dòng mới của chính nó;
+- Dấu phẩy (`,`) ở cuối mỗi khóa / giá trị;
+- **Dấu phẩy cuối** (`,`) trên mục cuối cùng để dễ dàng thêm, xóa hoặc sắp xếp lại các mục;
+- Dấu đóng dấu ngoặc (`)`) trên dòng mới của chính nó;
+- Không có khoảng trắng hoặc dòng mới giữa dấu ngoặc nhọn (`)`) và dấu chấm phẩy (`;`).
 
-Illustration:
+Minh họa:
 
 ```scss
 // Yep
@@ -547,21 +545,21 @@ $breakpoints: (
 $breakpoints: ( small: 767px, medium: 992px, large: 1200px );
 ```
 
-Write-ups about Sass maps are many given how longed-for this feature was. Here are 3 that I recommend: [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
+Các bài viết về Map Sass được đưa ra thường xuyên cho tính năng này. Dưới đây là 3 bài tôi khuyên bạn nên đọc: [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
-### *CSS Ruleset*
+### CSS Ruleset
 
-At this point, this is mostly revising what everybody knows, but here is how a CSS ruleset should be written (at least, according to most guidelines, including [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
+Tại thời điểm này, điều này chủ yếu là sửa đổi những gì mọi người biết, nhưng đây là cách viết một quy tắc CSS (ít nhất là theo hầu hết các hướng dẫn, nó bao gồm [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
-- related selectors on the same line; unrelated selectors on new lines;
-- the opening brace (`{`) spaced from the last selector by a single space;
-- each declaration on its own new line;
-- a space after the colon (`:`);
-- a trailing semi-colon (`;`) at the end of all declarations;
-- the closing brace (`}`) on its own new line;
-- a new line after the closing brace `}`.
+- Các selector liên quan trên cùng một dòng; selector không liên quan trên các dòng mới;
+- Dấu ngoặc mở (`{`) cách nhau từ selector cuối cùng bởi một khoảng trắng;
+- Mỗi thuộc tính trên dòng mới của riêng mình;
+- Một khoảng trắng sau dấu hai chấm (`:`);
+- Dấu chấm phẩy (`;`) ở cuối tất cả các khai báo;
+- Dấu ngoặc nhọn (`}`) trên dòng mới của chính nó;
+- Một dòng mới sau dấu ngoặc đóng `}`.
 
-Illustration:
+Minh họa:
 
 ```scss
 // Yep
@@ -580,15 +578,15 @@ Illustration:
     margin: 0 auto }
 ```
 
-Adding to those CSS-related guidelines, we want to pay attention to:
+Thêm vào các hướng dẫn liên quan đến CSS, tôi muốn chú ý đến:
 
-- local variables being declared before any declarations, then spaced from declarations by a new line;
-- mixin calls with no `@content` coming before any declaration;
-- nested selectors always coming after a new line;
-- mixin calls with `@content` coming after any nested selector;
-- no new line before a closing brace (`}`).
+- Các biến cục bộ được khai báo trước bất kỳ khai báo nào, sau đó cách nhau từ các khai báo bằng một dòng mới;
+- Các lần gọi mixin không có `@content` đến trước bất kỳ thuộc tính nào;
+- Selector lồng nhau luôn đến sau một dòng mới;
+- Mixin gọi với `@content` đến sau bất kỳ selector lồng nhau nào;
+- Không có dòng mới trước dấu ngoặc nhọn (`}`).
 
-Illustration:
+Minh họa:
 
 ```scss
 .foo, .foo-bar,
@@ -613,12 +611,12 @@ Illustration:
 
 ### *Declaration Sorting*
 
-I cannot think of many topics where opinions are as divided as they are regarding declaration sorting in CSS. Concretely, there are two factions here:
+Tôi không thể nghĩ ra nhiều chủ đề trong đó các ý kiến được phân chia như chúng liên quan đến việc sắp xếp khai báo trong CSS. Cụ thể, có hai trường phái ở đây:
 
-- sticking to the alphabetical order;
-- ordering declarations by type (position, display, colors, font, miscellaneous…).
+- Bám sát thứ tự chữ cái;
+- Khai báo thứ tự theo loại (vị trí, hiển thị, màu sắc, phông chữ, linh tinh).
 
-There are pros and cons for both ways. On one hand, alphabetical order is universal (at least for languages using the latin alphabet) so there is no argument about sorting one property before another. However, it seems extremely weird to me to see properties such as `bottom` and `top` not right next to each other. Why should animations appear before the display type? There are a lot of oddities with alphabetical ordering.
+Có những ưu và nhược điểm cho cả hai cách. Một mặt, thứ tự chữ cái là phổ quát (ít nhất là đối với các ngôn ngữ sử dụng bảng chữ cái Latinh) vì vậy không có tranh luận về việc sắp xếp một thuộc tính này trước một thuộc tính khác. Tuy nhiên, nó có vẻ cực kỳ kỳ lạ đối với tôi khi thấy các thuộc tính như `bottom` và` top` không nằm ngay cạnh nhau. Tại sao hình ảnh động nên xuất hiện trước loại màn hình? Có rất nhiều điều kỳ lạ với thứ tự chữ cái.
 
 ```scss
 .foo {
@@ -635,7 +633,7 @@ There are pros and cons for both ways. On one hand, alphabetical order is univer
 }
 ```
 
-On the other hand, ordering properties by type makes perfect sense. Every font-related declarations are gathered, `top` and `bottom` are reunited and reading a ruleset kind of feels like reading a short story. But unless you stick to some conventions like [Idiomatic CSS](https://github.com/necolas/idiomatic-css), there is a lot of room for interpretation in this way of doing things. Where would `white-space` go: font or display? Where does `overflow` belong exactly? What is the property order within a group (it could be alphabetical, oh the irony)?
+Mặt khác, sắp xếp các thuộc tính theo loại có ý nghĩa hoàn hảo. Mỗi khai báo liên quan đến phông chữ được thu thập, `top` và` bottom` được hợp nhất và đọc một loại quy tắc cảm giác giống như đọc một câu chuyện ngắn. Nhưng trừ khi bạn tuân theo một số quy ước như [Idiomatic CSS](https://github.com/necolas/idiomatic-css), có rất nhiều chỗ để diễn giải theo cách làm việc này. `white-space` sẽ đi đâu: phông chữ hoặc display? Trường hợp nào `overflow` chính xác? Thứ tự thuộc tính trong một nhóm (nó có thể được sắp xếp theo thứ tự abc, ôi thật trớ trêu)?
 
 ```scss
 .foo {
@@ -652,7 +650,7 @@ On the other hand, ordering properties by type makes perfect sense. Every font-r
 }
 ```
 
-There is also another interesting subtree of type ordering called [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), that seems to be quite popular as well. Basically, Concentric CSS relies on the box-model to define an order: starts outside, moves inward.
+Ngoài ra còn có một loại cây con thú vị khác về thứ tự thuộc tính được gọi là [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), dường như cũng khá phổ biến. Về cơ bản, CSS tập trung dựa vào box-model để xác định thứ tự: bắt đầu bên ngoài, di chuyển vào trong.
 
 ```scss
 .foo {
@@ -669,21 +667,23 @@ There is also another interesting subtree of type ordering called [Concentric CS
 }
 ```
 
-I must say I cannot decide myself. A [recent poll on CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) determined that over 45% developers order their declarations by type against 14% alphabetically. Also, there are 39% that go full random, including myself.
+Tôi phải nói rằng tôi không thể tự quyết định. Một [cuộc thăm dò gần đây về CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) đã xác định rằng hơn 45% developer đặt hàng khai báo theo loại chống lại 14% theo thứ tự abc. Ngoài ra, có 39% hoàn toàn ngẫu nhiên, bao gồm cả bản thân tôi.
 
-<figure role="group" style="text-align: center"> <img width="700" height="308" alt="Chart showing how developers order their CSS declarations " src="https://d33wubrfki0l68.cloudfront.net/189c15208fdc614be2ca324c26ec14350f591a30/56132/assets/images/css-order-chart.png"><figcaption>Chart showing how developers order their CSS declarations</figcaption></figure>
+<figure role="group" style="text-align: center"> <img width="700" height="308" alt="Chart showing how developers order their CSS declarations " src="https://d33wubrfki0l68.cloudfront.net/189c15208fdc614be2ca324c26ec14350f591a30/56132/assets/images/css-order-chart.png"><figcaption>Biểu đồ cho thấy cách các developer đặt hàng khai báo CSS của họ</figcaption></figure>
 
 Because of this, I will not impose a choice in this styleguide. Pick the one you prefer, as long as you are consistent throughout your stylesheets (i.e. not the *random* option).
 
-<blockquote class="note"><p>A <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">recent study</a> shows that using <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (which uses <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type ordering</a>) for sorting CSS declarations ends up shortening the average file size under Gzip compression by 2.7%, compared to 1.3% when sorting alphabetically.</p></blockquote>
+Chính vì điều này, tôi sẽ không áp đặt một sự lựa chọn trong styleguide này. Chọn cái bạn thích, miễn là bạn nhất quán trong suốt stylesheet của mình (nghĩa là không phải tùy chọn *ngẫu nhiên*).
+
+<blockquote class="note"><p>Một <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">nghiên cứu gần đây</a> cho thấy rằng sử dụng <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (Sử dụng <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">thứ tự kiểu</a>) để sắp xếp các khai báo CSS kết thúc việc rút ngắn kích thước tệp trung bình theo nén Gzip xuống 2,7%, so với 1,3% khi sắp xếp theo thứ tự bảng chữ cái.</p></blockquote>
 
 ### *Selector Nesting*
 
-One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for stylesheet authors to compute long selectors by nesting shorter selectors within each others.
+Một tính năng đặc biệt mà Sass cung cấp đang bị nhiều developer sử dụng quá mức là *selector lồng nhau*. Selector lồng nhau cung cấp một cách để những người viết stylesheet tính toán các selector dài bằng cách lồng các selector ngắn hơn trong nhau.
 
 ###### GENERAL RULE
 
-For instance, the following Sass nesting:
+Ví dụ, selector lồng nhau sau:
 
 ```scss
 .foo {
@@ -695,7 +695,7 @@ For instance, the following Sass nesting:
 }
 ```
 
-… will generate this CSS:
+… sẽ tạo ra CSS trông như này:
 
 ```css
 .foo .bar:hover {
@@ -703,7 +703,7 @@ For instance, the following Sass nesting:
 }
 ```
 
-Along the same lines, since Sass 3.3 it is possible to use the current selector reference (`&`) to generate advanced selectors. For instance:
+Dọc theo cùng một dòng, kể từ Sass 3.3 ta có thể sử dụng tham chiếu selector hiện tại (`&`) để tạo các selector nâng cao. Ví dụ:
 
 ```scss
 .foo {
@@ -713,7 +713,7 @@ Along the same lines, since Sass 3.3 it is possible to use the current selector 
 }
 ```
 
-… will generate this CSS:
+… sẽ tạo ra CSS trông như này:
 
 ```scss
 .foo-bar {
@@ -721,21 +721,21 @@ Along the same lines, since Sass 3.3 it is possible to use the current selector 
 }
 ```
 
-This method is often used along with [BEM naming conventions](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) to generate `.block__element` and `.block--modifier` selectors based on the original selector (i.e. `.block` in this case).
+Phương pháp này thường được sử dụng cùng với [BEM naming conventions](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) để tạo ra `.block__element` và `.block--modifier` selector dựa trên selector ban đầu (i.e. `.block` trong trường hợp này).
 
-<blockquote class="note"><p>While it might be anecdotal, generating new selectors from the current selector reference (<code>&amp;</code>) makes those selectors unsearchable in the codebase since they do not exist per se.</p></blockquote>
+<blockquote class="note"><p>Mặc dù có thể là chuyện nhỏ, việc tạo ra các selectors từ các tham chiếu selector hiện tại (<code>&amp;</code>) làm cho các selector đó không thể tìm kiếm được trong codebase vì chúng không tồn tại trên mỗi se.</p></blockquote>
 
-The problem with selector nesting is that it ultimately makes code more difficult to read. One has to mentally compute the resulting selector out of the indentation levels; it is not always quite obvious what the CSS will end up being.
+Vấn đề với selector lồng nhau là cuối cùng nó làm cho code khó đọc hơn. Người ta phải tính toán nhẩm selector kết quả ra khỏi các mức indent; không phải lúc nào cũng rõ ràng CSS sẽ là gì.
 
-This statement becomes truer as selectors get longer and references to the current selector (`&`) more frequent. At some point, the risk of losing track and not being able to understand what’s going on anymore is so high that it is not worth it.
+Câu lệnh này trở nên chính xác hơn khi các selector dài hơn và các tham chiếu đến selector hiện tại (`&`) thường xuyên hơn. Đến một lúc nào đó, nguy cơ mất dấu vết và không thể hiểu được những gì đang diễn ra nữa là quá cao đến mức không đáng.
 
-To prevent such situations, we talked a lot about [the Inception rule](http://thesassway.com/beginner/the-inception-rule) a few years back. It advised against nesting more than 3 levels deep, as a reference to the movie Inception from Christopher Nolan. I would be more drastic and recommend to **avoid selector nesting as much as possible**.
+Để ngăn chặn những tình huống như vậy, chúng tôi đã nói rất nhiều về [the Inception rule](http://thesassway.com/beginner/the-inception-rule) vài năm trước. Nó khuyên rằng không nên làm lồng sâu hơn 3 cấp độ, như một tài liệu tham khảo cho bộ phim Inception từ Christopher Nolan. Tôi sẽ quyết liệt hơn và khuyên bạn nên **tránh việc chọn lồng nhau càng nhiều càng tốt**.
 
-While there are obviously a few exceptions to this rule as we’ll see in the next section, this opinion seems to be quite popular. You can read about it more in details in [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) and [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
+Mặc dù rõ ràng có một vài ngoại lệ cho quy tắc này như chúng ta sẽ thấy trong phần tiếp theo, ý kiến này dường như khá phổ biến. Bạn có thể đọc chi tiết hơn về nó trong  [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) và [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 ###### EXCEPTIONS
 
-For starters, it is allowed and even recommended to nest pseudo-classes and pseudo-elements within the initial selector.
+Đối với người mới bắt đầu, nó được phép và thậm chí được khuyến nghị lồng các lớp giả và các phần tử giả trong selector ban đầu.
 
 ```scss
 .foo {
@@ -751,9 +751,9 @@ For starters, it is allowed and even recommended to nest pseudo-classes and pseu
 }
 ```
 
-Using selector nesting for pseudo-classes and pseudo-elements not only makes sense (because it deals with closely related selectors), it also helps keep everything about a component at the same place.
+Sử dụng selector lồng nhau cho các lớp giả và các phần tử giả không chỉ có ý nghĩa (vì nó liên quan đến các selector liên quan chặt chẽ), nó còn giúp giữ mọi thứ về một thành phần ở cùng một vị trí.
 
-Also, when using component-agnostic state classes such as `.is-active`, it is perfectly fine to nest it under the component’s selector to keep things tidy.
+Ngoài ra, khi sử dụng các lớp trạng thái không biết thành phần như `.is-active`, việc lồng nó dưới selector thành phần để giữ mọi thứ gọn gàng là điều hoàn toàn tốt.
 
 ```scss
 .foo {
@@ -765,7 +765,7 @@ Also, when using component-agnostic state classes such as `.is-active`, it is pe
 }
 ```
 
-Last but not least, when styling an element because it happens to be contained within another specific element, it is also fine to use nesting to keep everything about the component at the same place.
+Cuối cùng nhưng không kém phần quan trọng, khi tạo kiểu cho một element vì nó được chứa trong một element cụ thể khác, cũng tốt khi sử dụng lồng nhau để giữ mọi thứ về thành phần đó ở cùng một vị trí.
 
 ```scss
 .foo {
@@ -777,7 +777,7 @@ Last but not least, when styling an element because it happens to be contained w
 }
 ```
 
-As with everything, the specifics are somewhat irrelevant, consistency is key. If you feel fully confident with selector nesting, then use selector nesting. Just make sure your whole team is okay with that.
+Như với tất cả mọi thứ, các chi tiết cụ thể có phần không liên quan, tính nhất quán chính là chìa khóa. Nếu bạn cảm thấy hoàn toàn tự tin với selector lồng nhau, hãy sử dụng selector lồng nhau. Chỉ cần chắc chắn rằng toàn bộ team của bạn hoàn toàn ổn với điều đó.
 
 ## Naming Conventions
 
