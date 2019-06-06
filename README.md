@@ -667,11 +667,9 @@ Ngoài ra còn có một loại cây con thú vị khác về thứ tự thuộc
 }
 ```
 
-Tôi phải nói rằng tôi không thể tự quyết định. Một [cuộc thăm dò gần đây về CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) đã xác định rằng hơn 45% developer đặt hàng khai báo theo loại chống lại 14% theo thứ tự abc. Ngoài ra, có 39% hoàn toàn ngẫu nhiên, bao gồm cả bản thân tôi.
+Tôi phải nói rằng mình không thể tự quyết định. Một [cuộc thăm dò gần đây về CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) đã xác định rằng hơn 45% developer đặt hàng khai báo theo loại chống lại 14% theo thứ tự abc. Ngoài ra, có 39% hoàn toàn ngẫu nhiên, bao gồm cả bản thân tôi.
 
 <figure role="group" style="text-align: center"> <img width="700" height="308" alt="Chart showing how developers order their CSS declarations " src="https://d33wubrfki0l68.cloudfront.net/189c15208fdc614be2ca324c26ec14350f591a30/56132/assets/images/css-order-chart.png"><figcaption>Biểu đồ cho thấy cách các developer đặt hàng khai báo CSS của họ</figcaption></figure>
-
-Because of this, I will not impose a choice in this styleguide. Pick the one you prefer, as long as you are consistent throughout your stylesheets (i.e. not the *random* option).
 
 Chính vì điều này, tôi sẽ không áp đặt một sự lựa chọn trong styleguide này. Chọn cái bạn thích, miễn là bạn nhất quán trong suốt stylesheet của mình (nghĩa là không phải tùy chọn *ngẫu nhiên*).
 
@@ -942,45 +940,45 @@ Dưới đây là một ví dụ về một mixin được ghi lại rộng rãi
 
 ## Architecture
 
-Architecting a CSS project is probably one of the most difficult things you will have to do in a project’s life. Keeping the architecture consistent and meaningful is even harder.
+Kiến trúc một dự án CSS có lẽ là một trong những điều khó khăn nhất mà bạn sẽ phải làm trong suốt vòng đời của dự án. Giữ kiến trúc nhất quán và có ý nghĩa thậm chí còn khó hơn.
 
-Fortunately, one of the main benefits of using a CSS preprocessor is having the ability to split the codebase over several files without impacting performance (like the `@import` CSS directive would do). Thanks to Sass’s overload of the `@import` directive, it is perfectly safe (and actually recommended) to use as many files as necessary in development, all compiled into a single stylesheet when going to production.
+May mắn thay, một trong những lợi ích chính của việc sử dụng bộ tiền xử lý CSS là có khả năng phân tách codebase trên một số tệp mà không ảnh hưởng đến hiệu suất (như chỉ thị CSS `@import` đã làm). Nhờ có overload của Sass qua chỉ thị `@import`, nên hoàn toàn an toàn (và thực sự được khuyến nghị) để sử dụng nhiều tệp khi cần thiết trong quá trình phát triển, tất cả được biên dịch thành một bản định kiểu duy nhất khi đi vào production.
 
-On top of that, I cannot stress enough the need for folders, even on small scale projects. At home, you don’t drop every sheet of paper into the same box. You use folders; one for the house/flat, one for the bank, one for bills, and so on. There is no reason to do otherwise when structuring a CSS project. Split the codebase into meaningful separated folders so it is easy to find stuff later when you have to come back to the code.
+Trên hết, tôi không thể nhấn mạnh đủ nhu cầu cho các thư mục, ngay cả trên các dự án quy mô nhỏ. Ở nhà, bạn không lồng thả từng sheet vào cùng một box. Bạn sử dụng các thư mục; Một cho nhà / căn hộ, một cho ngân hàng, một cho hóa đơn, vv. Không có lý do để làm khác khi cấu trúc một dự án CSS. Tách codebase thành các thư mục riêng biệt có ý nghĩa để dễ dàng tìm thấy nội dung sau này khi bạn phải quay lại code.
 
-There are [a lot of popular architectures](http://www.sitepoint.com/look-different-sass-architectures/) for CSS projects: [OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like… They all have their merits, pros and cons.
+Có [rất nhiều kiến trúc phổ biến](http://www.sitepoint.com/look-different-sass-architectures/) cho những dự án CSS: [OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like… Tất cả đều có ưu và nhược điểm riêng
 
-I, myself, use an approach that happens to be quite similar to [SMACSS](https://smacss.com/) from [Jonathan Snook](http://snook.ca/), which focuses on keeping things simple and obvious.
+Bản thân tôi sử dụng một cách tiếp cận khá giống với [SMACSS](https://smacss.com/) từ [Jonathan Snook](http://snook.ca/), trong đó tập trung vào việc giữ mọi thứ đơn giản và rõ ràng.
 
-<blockquote class="note"><p>I have learnt that architecture is most of the time very specific to the project. Feel free to discard completely or adapt the proposed solution so that you deal with a system that suits your needs.</p></blockquote>
+<blockquote class="note"><p>Tôi đã học được rằng kiến trúc chiếm hầu hết thời gian của dự án. Vui lòng loại bỏ hoàn toàn hoặc điều chỉnh giải pháp được đề xuất để giải quyết một hệ thống phù hợp với nhu cầu của bạn.</p></blockquote>
 
 ### *Components*
 
-There is a major difference between making it *work*, and making it *good*. Again, CSS is quite a messy language [citation needed]. The less CSS we have, the merrier. We don’t want to deal with megabytes of CSS code. To keep stylesheets short and efficient—and this will not be any surprise to you—it is usually a good idea to think of an interface as a collection of components.
+Có một sự khác biệt lớn giữa việc làm cho nó *hoạt động* và làm cho nó *tốt*. Một lần nữa, CSS là một ngôn ngữ khá lộn xộn [cần dẫn nguồn]. CSS càng ít, càng vui. Chúng ta không muốn đối phó với megabyte của code CSS. Để giữ cho các stylesheet ngắn và hiệu quả, và điều này sẽ không gây bất ngờ cho bạn, bạn nên nghĩ về giao diện là một bộ sưu tập các component.
 
-Components can be anything, as long as they:
+Các component có thể là bất cứ thứ gì, miễn là chúng:
 
-- do one thing and one thing only;
-- are re-usable and re-used across the project;
-- are independent.
+- Làm một việc và một việc duy nhất;
+- Được tái sử dụng và tái sử dụng trên toàn dự án;
+- Độc lập.
 
-For instance, a search form should be treated as a component. It should be reusable, at different positions, on different pages, in various situations. It should not depend on its position in the DOM (footer, sidebar, main content…).
+Ví dụ, một search form nên được coi là một component. Nó nên được tái sử dụng, ở các vị trí khác nhau, trên các trang khác nhau, trong các tình huống khác nhau. Nó không nên phụ thuộc vào vị trí của nó trong DOM (footer, sidebar, main content).
 
-Most of any interface can be thought of as little components and I highly recommend you stick to this paradigm. This will not only shorten the amount of CSS needed for the whole project, but also happens to be much easier to maintain than a chaotic mess where everything is flustered.
+Hầu hết mọi giao diện đều có thể được coi là các component nhỏ và tôi thực sự khuyên bạn nên tuân thủ mô hình này. Điều này sẽ không chỉ rút ngắn lượng CSS cần thiết cho toàn bộ dự án, mà còn dễ bảo trì hơn nhiều so với một mớ hỗn độn nơi mọi thứ đều rối loạn.
 
 ### *Component Structure*
 
-Ideally, components should exist in their own Sass partial (within the `components/` folder, as is described in the [7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern)), such as `components/_button.scss`. The styles described in each component file should only be concerned with:
+Lý tưởng nhất là các component nên tồn tại trong một phần Sass của riêng chúng (trong thư mục `component/`, như được mô tả trong [7-1 pattern](https://sass-guidelin.es/#the-7-1-potype)), chẳng hạn như `component/ _button.scss`. Các style được mô tả trong mỗi tệp component chỉ nên được quan tâm với:
 
-- the style of the component itself;
-- the style of the component’s variants, modifiers, and/or states;
-- the styles of the component’s descendents (i.e. children), if necessary.
+- Style của chính component đó;
+- Style của các biến thể component, bộ sửa đổi và /hoặc trạng thái component;
+- Style của các hậu duệ của component (tức là con), nếu cần thiết.
 
-If you want your components to be able to be themed externally (e.g. from a theme inside the `themes/` folder), limit the declarations to only structural styles, such as dimensions (width/height), padding, margins, alignment, etc. Exclude styles such as colors, shadows, font rules, background rules, etc.
+Nếu bạn muốn các component của mình có thể được theo theme bên ngoài (ví dụ: từ một theme bên trong thư mục `Themes/`), hãy giới hạn các khai báo chỉ các style cấu trúc, chẳng hạn như kích thước (width/height), padding, margin, alignment, v.v. . Loại trừ các style như color, shadows, quy tắc font, quy tắc background, v.v.
 
-A component partial can include component-specific variables, placeholders, and even mixins and functions. Keep in mind, though, that you should avoid referencing (i.e. `@import`-ing) component files from other component files, as this can make your project’s dependency graph an unmaintainable tangled mess.
+Một phần component có thể bao gồm các biến component cụ thể, placeholder và thậm chí cả mixin và function. Tuy nhiên, hãy nhớ rằng bạn nên tránh tham chiếu các tệp component (ví dụ: `@ import`-ing) từ các tệp component khác, vì điều này có thể làm cho biểu đồ phụ thuộc của dự án của bạn trở thành một mớ hỗn độn dễ nhầm lẫn.
 
-Here is an example of a button component partial:
+Dưới đây là một ví dụ về một phần component button:
 
 ```scss
 // Button-specific variables
@@ -1025,11 +1023,11 @@ $button-color: $secondary-color;
 }
 ```
 
-<blockquote class="note"><p>Thanks to <a href="https://twitter.com/davidkpiano">David Khourshid</a> for his help and expertise on this section.</p></blockquote>
+<blockquote class="note"><p>Cảm ơn <a href="https://twitter.com/davidkpiano">David Khourshid</a> vì sự giúp đỡ và chuyên môn trong phần này.</p></blockquote>
 
 ### *The 7-1 Pattern*
 
-Back to architecture, shall we? I usually go with what I call the *7-1 pattern*: 7 folders, 1 file. Basically, you have all your partials stuffed into 7 different folders, and a single file at the root level (usually named `main.scss`) which imports them all to be compiled into a CSS stylesheet.
+Quay lại với kiến trúc, tôi thường nói về những gì tôi gọi là  *7-1 pattern*: 7 thư mục, 1 tệp. Về cơ bản, bạn có tất cả các phần của mình được nhồi vào 7 thư mục khác nhau và một tệp duy nhất ở cấp gốc (thường được đặt tên là `main.scss`) để nhập tất cả chúng để được biên dịch thành CSS stylesheet.
 
 - `base/`
 - `components/`
@@ -1039,15 +1037,15 @@ Back to architecture, shall we? I usually go with what I call the *7-1 pattern*:
 - `abstracts/`
 - `vendors/`
 
-And of course:
+Và dĩ nhiên:
 
 - `main.scss`
 
-<blockquote class="note"><p>If you are looking to use the 7-1 pattern, there is a <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> ready on GitHub. It should contain everything you need to get started with this architecture.</p></blockquote>
+<blockquote class="note"><p>Nếu bạn đang tìm cách sử dụng 7-1 pattern, đã có sẵn một <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> trên GitHub. Nó chứa mọi thứ bạn cần để bắt đầu với kiến trúc này.</p></blockquote>
 
 <figure role="group" style="text-align: center"> <img data-proofer-ignore="" alt="Wallpaper by Julien He " sizes="100vw" srcset="https://d33wubrfki0l68.cloudfront.net/83050df0f35e960a4fc2bb0b0f8df68ee25ab80a/d4b00/assets/images/sass-wallpaper_small.jpg 540w, https://d33wubrfki0l68.cloudfront.net/6687589e656a32ecb7780d13fac82a67cd8c679d/e3e38/assets/images/sass-wallpaper_medium.jpg 900w, https://d33wubrfki0l68.cloudfront.net/c0f986a6a230f667e2b180436899ffe86c29f33c/03f50/assets/images/sass-wallpaper_large.jpg 1200w, https://d33wubrfki0l68.cloudfront.net/2cc0bf5eb77112d83166f6324013ba157139ae24/8e392/assets/images/sass-wallpaper_huge.jpg 1590w"><figcaption>Wallpaper by <a href="https://twitter.com/julien_he">Julien He</a></figcaption></figure>
 
-Ideally, we can come up with something like this:
+Lý tưởng nhất, ta có thể đưa ra một cái gì đó trông như thế này:
 
 ```scss
 sass/
@@ -1097,21 +1095,21 @@ sass/
 `– main.scss              # Main Sass file
 ```
 
-<blockquote class="note"><p>Files follow the same naming conventions described above: they are hyphen-delimited.</p></blockquote>
+<blockquote class="note"><p>Các tệp tuân theo các quy ước đặt tên giống như được mô tả ở trên: chúng được phân cách bằng dấu gạch nối.</p></blockquote>
 
 ###### BASE FOLDER
 
-The `base/` folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet defining some standard styles for commonly used HTML elements (that I like to call `_base.scss`).
+Thư mục `base/` chứa những gì chúng ta có thể gọi là code soạn sẵn cho dự án. Trong đó, bạn có thể tìm thấy tệp đặt lại, một số quy tắc chính tả và có thể là stylesheet xác định một số style chuẩn cho các phần tử HTML thường được sử dụng (mà tôi muốn gọi là `_base.scss`).
 
 - `_base.scss`
 - `_reset.scss`
 - `_typography.scss`
 
-<blockquote class="note"><p>If your project uses <em>a lot</em> of CSS animations, you might consider adding an <code>\_animations.scss</code> file in there containing the <code>@keyframes</code> definitions of all your animations. If you only use a them sporadically, let them live along the selectors that use them.</p></blockquote>
+<blockquote class="note"><p>Nếu dự án của bạn sử dụng <em>quả nhiều</em> CSS animation, bạn có thể xem xét thêm tệp <code>\_animations.scss</code> trong đó chứa các định nghĩa <code>@keyframes</code> của tất cả các animation của bạn. Nếu bạn chỉ sử dụng chúng một cách rời rạc, hãy cứ đặt chúng dọc theo các selector sử dụng chúng.</p></blockquote>
 
 ###### LAYOUT FOLDER
 
-The `layout/` folder contains everything that takes part in laying out the site or application. This folder could have stylesheets for the main parts of the site (header, footer, navigation, sidebar…), the grid system or even CSS styles for all the forms.
+Thư mục `layout/` chứa mọi thứ tham gia vào việc bố trí trang web hoặc ứng dụng. Thư mục này có thể có các stylesheet cho các phần chính của trang web (header, footer, navigation, sidebar, ...), grid systemi hoặc thậm chí các CSS style cho tất cả các biểu mẫu.
 
 - `_grid.scss`
 - `_header.scss`
@@ -1120,69 +1118,71 @@ The `layout/` folder contains everything that takes part in laying out the site 
 - `_forms.scss`
 - `_navigation.scss`
 
-<blockquote class="note"><p>The <code>layout/</code> folder might also be called <code>partials/</code>, depending on what you prefer.</p></blockquote>
+<blockquote class="note"><p>Thư mục <code>layout/</code> cũng có thể được gọi là <code>partials/</code>, tuỳ thuộc ý thích của bạn.</p></blockquote>
 
 ###### COMPONENTS FOLDER
 
-For smaller components, there is the `components/` folder. While `layout/` is *macro* (defining the global wireframe), `components/` is more focused on widgets. It contains all kind of specific modules like a slider, a loader, a widget, and basically anything along those lines. There are usually a lot of files in `components/` since the whole site/application should be mostly composed of tiny modules.
+Đối với các thành phần nhỏ hơn, ta có thư mục `components/`. Trong khi `layout/` là * macro * (xác định wireframe toàn cục), thì `components/` tập trung nhiều hơn vào các widget. Nó chứa tất cả các loại module cụ thể như slider, loader, widget và về cơ bản là bất cứ thứ gì tương tự như vậy. Thường có rất nhiều tệp trong `components/` vì toàn bộ trang web / ứng dụng nên chủ yếu bao gồm các module nhỏ.
 
 - `_media.scss`
 - `_carousel.scss`
 - `_thumbnails.scss`
 
-<blockquote class="note"><p>The <code>components/</code> folder might also be called <code>modules/</code>, depending on what you prefer.</p></blockquote>
+<blockquote class="note"><p>Thư mục <code>components/</code> có thể được đặt là  <code>modules/</code>, tuỳ thuộc vào ý thích của bạn.</p></blockquote>
 
 ###### PAGES FOLDER
 
 If you have page-specific styles, it is better to put them in a `pages/` folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a `_home.scss` file in `pages/`.
 
+Nếu bạn có style dành riêng cho trang, tốt hơn là đặt chúng vào thư mục `pages/`, trong một tệp có tên sau trang. Chẳng hạn, không có gì lạ khi có các style rất cụ thể cho trang chủ do đó cần có tệp `_home.scss` trong` pages/`.
+
 - `_home.scss`
 - `_contact.scss`
 
-<blockquote class="note"><p>Depending on your deployment process, these files could be called on their own to avoid merging them with the others in the resulting stylesheet. It is really up to you.</p></blockquote>
+<blockquote class="note"><p>Tùy thuộc vào quá trình triển khai của bạn, các tệp này có thể được gọi riêng để tránh hợp nhất chúng với các tệp khác trong stylesheet kết quả. Nó thực sự là tùy thuộc vào bạn.</p></blockquote>
 
 ###### THEMES FOLDER
 
-On large sites and applications, it is not unusual to have different themes. There are certainly different ways of dealing with themes but I personally like having them all in a `themes/` folder.
+Trên các trang web và ứng dụng lớn, không có gì lạ khi có các chủ đề khác nhau. Chắc chắn là có nhiều cách khác nhau để xử lý các chủ đề nhưng cá nhân tôi thích có tất cả chúng trong một thư mục `Themes/`.
 
 - `_theme.scss`
 - `_admin.scss`
 
-<blockquote class="note"><p>This is very project-specific and is likely to be non-existent on many projects.</p></blockquote>
+<blockquote class="note"><p>Điều này rất đặc biệt và có khả năng không tồn tại trên nhiều dự án.</p></blockquote>
 
 ###### ABSTRACTS FOLDER
 
-The `abstracts/` folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here.
+Thư mục `abstracts/` tập hợp tất cả các công cụ và helper Sass được sử dụng trên toàn dự án. Mỗi biến toàn cục, hàm, mixin và placeholder nên được đặt ở đây.
 
-The rule of thumb for this folder is that it should not output a single line of CSS when compiled on its own. These are nothing but Sass helpers.
+Nguyên tắc chung cho thư mục này là nó không nên xuất một dòng CSS nào khi được biên dịch riêng. Nó không có vai trò gì ngoài việc củng cố Sass.
 
-- `_variables.scss`
+- `_variabled.scss`
 - `_mixins.scss`
-- `_functions.scss`
-- `_placeholders.scss`
+- `_fiances.scss`
+- `_placeholder.scss`
 
-When working on a very large project with a lot of abstract utilities, it might be interesting to group them by topic rather than type, for instance typography (`_typography.scss`), theming (`_theming.scss`), etc. Each file contains all the related helpers: variables, functions, mixins and placeholders. Doing so can make the code easier to browse and maintain, especially when files are getting very long.
+Khi làm việc trong một dự án rất lớn với nhiều tiện ích trừu tượng, sẽ rất thú vị khi nhóm chúng theo chủ đề thay vì kiểu, ví dụ như kiểu chữ (`_typography.scss`), theo chủ đề (` _theming.scss`), v.v. tập tin chứa tất cả các helper liên quan: variable, function, mixins và placeholder. Làm như vậy có thể làm cho code dễ duyệt và bảo trì hơn, đặc biệt là khi các tệp đang trở nên rất dài.
 
-<blockquote class="note"><p>The <code>abstracts/</code> folder might also be called <code>utilities/</code> or <code>helpers/</code>, depending on what you prefer.</p></blockquote>
+<blockquote class="note"><p>Thư mục <code>abstracts/</code> có thể được đặt là <code>utilities/</code> hoặc <code>helpers/</code>, tuỳ thuộc vào bạn thích cái nào hơn.</p></blockquote>
 
 ###### VENDORS FOLDER
 
-And last but not least, most projects will have a `vendors/` folder containing all the CSS files from external libraries and frameworks – Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, and so on. Putting those aside in the same folder is a good way to say “Hey, this is not from me, not my code, not my responsibility”.
+Và cuối cùng nhưng không kém phần quan trọng, hầu hết các dự án sẽ có thư mục `vendors/` chứa tất cả các tệp CSS từ các thư viện và framework bên ngoài - Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, v.v. Đặt những thứ đó sang một bên trong cùng một thư mục là một cách hay để nói rằng "Hey, code này không phải từ tôi, không phải code của tôi, không phải trách nhiệm của tôi".
 
-- `_normalize.scss`
+- `_nnormalize.scss`
 - `_bootstrap.scss`
 - `_jquery-ui.scss`
 - `_select2.scss`
 
-If you have to override a section of any vendor, I recommend you have an 8th folder called `vendors-extensions/` in which you may have files named exactly after the vendors they overwrite.
+Nếu bạn phải ghi đè một phần của bất kỳ vendor nào, tôi khuyên bạn nên có một thư mục thứ 8 có tên là 'vendors-extensions / ` trong đó bạn có thể có các tệp được đặt tên chính xác theo nhà cung cấp mà họ ghi đè.
 
-For instance, `vendors-extensions/_bootstrap.scss` is a file containing all CSS rules intended to re-declare some of Bootstrap’s default CSS. This is to avoid editing the vendor files themselves, which is generally not a good idea.
+Chẳng hạn, `nhà vendors-extensions/_bootstrap.scss` là một tệp chứa tất cả các quy tắc CSS nhằm khai báo lại một số CSS mặc định của Bootstrap. Điều này là để tránh tự chỉnh sửa các tập tin nhà cung cấp, thường không phải là một ý tưởng tốt.
 
 ###### MAIN FILE
 
-The main file (usually labelled `main.scss`) should be the only Sass file from the whole code base not to begin with an underscore. This file should not contain anything but `@import` and comments.
+Tệp chính (thường được gắn nhãn `main.scss`) phải là tệp Sass duy nhất trong toàn bộ codebase không bắt đầu bằng dấu gạch dưới. Tệp này không được chứa bất cứ thứ gì ngoài `@import` và các comment.
 
-Files should be imported according to the folder they live in, one after the other in the following order:
+Các tệp nên được nhập theo thư mục mà chúng tồn tại, lần lượt theo thứ tự sau:
 
 1. `abstracts/`
 2. `vendors/`
@@ -1192,13 +1192,13 @@ Files should be imported according to the folder they live in, one after the oth
 6. `pages/`
 7. `themes/`
 
-In order to preserve readability, the main file should respect these guidelines:
+Để duy trì khả năng đọc, tệp chính cần tôn trọng các nguyên tắc sau:
 
-- one file per `@import`;
-- one `@import` per line;
-- no new line between two imports from the same folder;
-- a new line after the last import from a folder;
-- file extensions and leading underscores omitted.
+- Một tệp cho mỗi `@import`;
+- Một `@import` trên mỗi dòng;
+- Không có dòng mới giữa hai lần nhập từ cùng một thư mục;
+- Một dòng mới sau lần nhập cuối cùng từ một thư mục;
+- Phần mở rộng tập tin và dấu gạch dưới hàng đầu bị bỏ qua.
 
 ```scss
 @import 'abstracts/variables';
@@ -1231,13 +1231,13 @@ In order to preserve readability, the main file should respect these guidelines:
 @import 'themes/admin';
 ```
 
-There is another way of importing partials that I deem valid as well. On the bright side, it makes the file more readable. On the other hand, it makes updating it slightly more painful. Anyway, I’ll let you decide which is best, it does not matter much. For this way of doing, the main file should respect these guidelines:
+Có một cách khác để nhập các phần mà tôi cho là hợp lệ. Về mặt tươi sáng, nó làm cho tập tin dễ đọc hơn. Mặt khác, nó làm cho việc cập nhật nó hơi đau đớn hơn. Dù sao, tôi sẽ cho phép bạn quyết định cái nào là tốt nhất, nó không quan trọng lắm. Đối với cách làm này, tệp chính phải tôn trọng các nguyên tắc sau:
 
-- one `@import` per folder;
-- a linebreak after `@import`;
-- each file on its own line;
-- a new line after the last import from a folder;
-- file extensions and leading underscores omitted.
+- Một `@import` cho mỗi thư mục;
+- Ngắt dòng sau `@import`;
+- Mỗi tệp trên dòng riêng của nó;
+- Một dòng mới sau lần nhập cuối cùng từ một thư mục;
+- Phần mở rộng tập tin và dấu gạch dưới hàng đầu bị bỏ qua.
 
 ```scss
 @import
@@ -1279,7 +1279,7 @@ There is another way of importing partials that I deem valid as well. On the bri
 
 ### *About Globbing*
 
-In computer programming, glob patterns specify sets of filenames with wildcard characters, such as `*.scss`. To a general extent, globbing means matching a set of files based on an expression instead of a list of filenames. When applied to Sass, it means importing partials into the [main file](https://sass-guidelin.es/#main-file) with a glob pattern rather than by listing them individually. This would lead to a main file looking like this:
+Trong lập trình máy tính, các pattern toàn cục chỉ định các tên tệp có ký tự đại diện, chẳng hạn như `*.scss`. Ở một mức độ chung, globalbing có nghĩa là khớp một tập hợp các tệp dựa trên biểu thức thay vì danh sách tên tệp. Khi được áp dụng cho Sass, điều đó có nghĩa là nhập các phần vào [tệp chính](https://sass-guidelin.es/#main-file) với mẫu hình cầu thay vì liệt kê riêng lẻ. Điều này sẽ dẫn đến một tệp chính trông như thế này:
 
 ```scss
 @import 'abstracts/*';
@@ -1291,15 +1291,15 @@ In computer programming, glob patterns specify sets of filenames with wildcard c
 @import 'themes/*';
 ```
 
-Sass does not support file globbing out of the box because it can be a dangerous feature as CSS is known to be order-dependant. When dynamically importing files (which usually goes in alphabetical order), one does not control the source order anymore, which can lead to hard to debug side-effects.
+Sass không hỗ trợ tập tin toàn cục vì nó có thể là một tính năng nguy hiểm vì CSS được biết là phụ thuộc vào thứ tự. Khi nhập động các tệp (thường đi theo thứ tự bảng chữ cái), người ta không kiểm soát thứ tự nguồn nữa, điều này có thể dẫn đến khó gỡ lỗi tác dụng phụ.
 
-That being said, in a strict component-based architecture with extra care not to leak any style from one partial to the other, the order should not really matter anymore, which would allow for glob imports. This would make it easier to add or remove partials as carefully updating the main file would no longer be required.
+Điều đó đang được đề cập đến, trong một kiến trúc dựa trên thành phần nghiêm ngặt, đặc biệt cẩn thận không rò rỉ bất kỳ style nào từ bộ phận này sang bộ phận khác, thứ tự sẽ không thực sự quan trọng nữa, điều này sẽ cho phép import toàn cục. Điều này sẽ giúp dễ dàng thêm hoặc xóa các phần vì việc cập nhật cẩn thận tệp chính sẽ không còn cần thiết nữa.
 
-When using Ruby Sass, there is a Ruby gem called [sass-globbing](https://github.com/chriseppstein/sass-globbing) that enables exactly that behavior. If running on node-sass, one can rely either on Node.js, or whatever build tool they use to handle the compilation (Gulp, Grunt, etc.).
+Khi sử dụng Ruby Sass, có một Ruby gem được gọi là [sass-continbing](https://github.com/chriseppstein/sass-globbing) cho phép thực hiện chính xác hành vi đó. Nếu chạy trên node-sass, người ta có thể dựa vào Node.js hoặc bất kỳ công cụ xây dựng nào họ sử dụng để xử lý việc biên dịch (Gulp, Grunt, v.v.).
 
 ### *Shame File*
 
-There is an interesting concept that has been made popular by [Harry Roberts](http://csswizardry.com/), [Dave Rupert](http://daverupert.com/) and [Chris Coyier](http://css-tricks.com/) that consists of putting all the CSS declarations, hacks and things we are not proud of in a [shame file](http://csswizardry.com/2013/04/shame-css-full-net-interview/). This file, dramatically titled `_shame.scss`, would be imported after any other file, at the very end of the stylesheet.
+Có một khái niệm thú vị đã được phổ biến bởi [Harry Roberts](http://csswizardry.com/), [Dave Rupert](http://daverupert.com/) và [Chris Coyier](http: // css-tricks.com/) bao gồm việc đưa tất cả các khai báo CSS, hack và những thứ chúng tôi không tự hào về [tệp xấu hổ](http://csswizardry.com/2013/04/shame-css-full-net -phỏng vấn/). Tệp này, có tiêu đề rõ ràng là `_shame.scss`, sẽ được nhập sau bất kỳ tệp nào khác, ở cuối biểu định kiểu.
 
 ```scss
 /**
@@ -1316,13 +1316,13 @@ There is an interesting concept that has been made popular by [Harry Roberts](ht
 
 ## Responsive Web Design And Breakpoints
 
-I do not think we still have to introduce Responsive Web Design now that it is everywhere. However you might ask yourself *why is there a section about RWD in a Sass styleguide?* Actually there are quite a few things that can be done to make working with breakpoints easier, so I thought it would not be such a bad idea to list them here.
+Tôi không nghĩ rằng chúng ta vẫn cần phải giới thiệu về Responsive Web Design nữa vì nó đã có ở khắp mọi nơi. Tuy nhiên, bạn có thể tự hỏi *tại sao lại có một phần về RWD trong Sass styleguide?* Trên thực tế có khá nhiều điều có thể được thực hiện để làm việc với các breakpoint dễ dàng hơn, vì vậy tôi nghĩ rằng sẽ không phải là một ý tưởng tồi để liệt kê nó ra đây
 
 ### *Naming Breakpoints*
 
-I think it is safe to say that media queries should not be tied to specific devices. For instance, this is definitely a bad idea to try targeting iPads or Blackberry phones specifically. Media queries should take care of a range of screen sizes, until the design breaks and the next media query takes over.
+Tôi nghĩ rằng hoàn toàn hợp lý khi nói rằng các media query không nên được gắn với các thiết bị cụ thể. Ví dụ, đây chắc chắn là một ý tưởng tồi để thử nhắm mục tiêu cụ thể vào iPad hoặc điện thoại Blackberry. Các media query nên quan tâm đến một loạt các kích thước màn hình, cho đến khi thiết kế bị hỏng và media query tiếp theo sẽ tiếp tục đè lên.
 
-For the same reasons, breakpoints should not be named after devices but something more general. Especially since some phones are now bigger than tablets, some tablets bigger than some tiny screen computers, and so on…
+Vì những lý do tương tự, các breakpoint không nên được đặt tên theo thiết bị mà là một cái tên đó tổng quát hơn. Đặc biệt là vì một số điện thoại bây giờ lớn hơn máy tính bảng, một số máy tính bảng lớn hơn một số máy tính màn hình nhỏ, v.v.
 
 ```scss
 // Yep
@@ -1342,6 +1342,8 @@ $breakpoints: (
 
 At this point, [any naming convention](http://css-tricks.com/naming-media-queries/) that makes crystal clear that a design is not intimately tied to a specific device type will do the trick, as long as it gives a sense of magnitude.
 
+Tại thời điểm này, [bất kỳ quy ước đặt tên nào](http://css-tricks.com/naming-media-queries/) làm cho rõ ràng rằng một thiết kế không được gắn chặt với một loại thiết bị cụ thể sẽ thực hiện thủ thuật, miễn là vì nó mang lại một cảm giác về độ lớn bao phủ.
+
 ```scss
 $breakpoints: (
   'seed': (min-width: 800px),
@@ -1350,11 +1352,11 @@ $breakpoints: (
 );
 ```
 
-<blockquote class="note"><p>The previous examples uses nested maps to define breakpoints, however this really depends on what kind of breakpoint manager you use. You could opt for strings rather than inner maps for more flexibility (e.g. <code>'(min-width: 800px)'</code>).</p></blockquote>
+<blockquote class="note"><p>Các ví dụ trước sử dụng map lồng nhau để xác định breakpoint, tuy nhiên điều này thực sự phụ thuộc vào loại trình quản lý breakpoint bạn sử dụng. Bạn có thể chọn các chuỗi thay vì các map bên trong để linh hoạt hơn (e.g. <code>'(min-width: 800px)'</code>).</p></blockquote>
 
 ### *Breakpoint Manager*
 
-Once you have named your breakpoints the way you want, you need a way to use them in actual media queries. There are plenty of ways to do so but I must say I am a big fan of the breakpoint map read by a getter function. This system is both simple and efficient.
+Khi bạn đã đặt tên cho breakpoint của mình theo cách bạn muốn, bạn cần một cách để sử dụng chúng trong các media query thực tế. Có rất nhiều cách để làm như vậy nhưng tôi phải nói rằng tôi là một fan hâm mộ lớn của breakpoint map được đọc bởi một hàm getter. Hệ thống này vừa đơn giản vừa hiệu quả.
 
 ```scss
 /// Responsive breakpoint manager
@@ -1381,11 +1383,11 @@ Once you have named your breakpoints the way you want, you need a way to use the
 }
 ```
 
-<blockquote class="note"><p>Obviously, this is a fairly simplistic breakpoint manager. If you need a slightly more permissive one, may I recommend you do not reinvent the wheel and use something that has been proven effective such as <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> or <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p><p>If you are looking to read more on how to approach Media Queries in Sass, both <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (from yours, truly) and <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> have nice articles on this.</p></blockquote>
+<blockquote class="note"><p>Rõ ràng, đây là một trình quản lý breakpoint khá đơn giản. Nếu bạn cần một thứ dễ dàng hơn một chút, tôi có thể khuyên bạn rằng không nên phát minh lại bánh xe và sử dụng những thứ đã được chứng minh là hiệu quả như <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> hay <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p><p>Nếu bạn muốn đọc thêm về cách tiếp cận các media query trong Sass, hay cả <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (từ chính bạn) và <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> đều có những bài viết hay về chủ đề này.</p></blockquote>
 
 ### *Media Queries Usage*
 
-Not so long ago, there was quite a hot debate about where media queries should be written: do they belong within selectors (as Sass allows it) or strictly dissociated from them? I have to say I am a fervent defender of the *media-queries-within-selectors* system, as I think it plays well with the ideas of *components*.
+Cách đây không lâu, đã có một cuộc tranh luận khá sôi nổi về nơi nên viết các media query: chúng có thuộc về selector (vì Sass cho phép nó) hoặc tách ra khỏi chúng không? Tôi phải nói rằng tôi là một người bảo vệ nhiệt thành cho hệ thống *media-queries-within-selectors*, vì tôi nghĩ rằng nó hoạt động rất tốt tốt với các ý tưởng của *component*.
 
 ```scss
 .foo {
@@ -1397,7 +1399,7 @@ Not so long ago, there was quite a hot debate about where media queries should b
 }
 ```
 
-Leading to the following CSS output:
+Dẫn đến đầu ra CSS như sau:
 
 ```css
 .foo {
@@ -1411,12 +1413,12 @@ Leading to the following CSS output:
 }
 ```
 
-You might hear that this convention results in duplicated media queries in the CSS output. That is definitely true. Although, [tests have been made](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) and the final word is that it doesn’t matter once Gzip (or any equivalent) has done its thing:
+Bạn có thể nghe rằng quy ước này dẫn đến các media query trùng lặp trong đầu ra CSS. Điều đó chắc chắn là đúng. Mặc dù, [các thử nghiệm đã được thực hiện](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) và từ cuối cùng là nó không thành vấn đề khi Gzip (hoặc bất kỳ thứ tương đương nào) thực hiện công việc của nó:
 
 > … we hashed out whether there were performance implications of combining vs scattering Media Queries and came to the conclusion that the difference, while ugly, is minimal at worst, essentially non-existent at best.
 > — [Sam Richards, regarding Breakpoint](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 
-Now, if you really are concerned about duplicated media queries, you can still use a tool to merge them such as [this gem](https://github.com/aaronjensen/sass-media_query_combiner) however I feel like I have to warn you against possible side-effects of moving CSS code around. You are not without knowing that source order is important.
+Bây giờ, nếu bạn thực sự lo lắng về các media query trùng lặp, bạn vẫn có thể sử dụng một công cụ để hợp nhất chúng như [gem này](https://github.com/aaronjensen/sass-media_query_combiner) tuy nhiên tôi cảm thấy như mình phải cảnh báo bạn chống lại các tác dụng phụ có thể có của việc di chuyển code CSS xung quanh. Bạn hẳn là biết rằng thứ tự nguồn là rất quan trọng.
 
 ## Variables
 
